@@ -1,0 +1,1 @@
+INSERT INTO registedPerson (firstName,lastName) VALUES('Passapong','Thaithatgoon');
