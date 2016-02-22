@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import th.or.operationsmile.cmfs.exception.ErrorFieldException;
 import th.or.operationsmile.cmfs.exception.InvalidDataException;
 import th.or.operationsmile.cmfs.model.RegistedPerson;
 
@@ -209,5 +210,61 @@ public class Test_InputData {
 		registedPerson.settShirtSize(wrongInput);
 		assertEquals(null, registedPerson.gettShirtSize());
 
+	}
+	
+	@Test
+	public void can_input_right_registedPerson()throws ErrorFieldException,InvalidDataException{
+		RegistedPerson rightInput = new RegistedPerson();
+		rightInput.setTitle("mr");
+		rightInput.setFirstName("TestFirstName");
+		rightInput.setLastName("TestLastName");
+		rightInput.setBirthDate("2000-11-11");
+		rightInput.setMobile("0123456789");
+		rightInput.setEmail("test@test.com");
+		rightInput.setAddress("address...");
+		rightInput.settShirtSize("m");
+		rightInput.settShirtPickUpPoint("aa");
+		rightInput.setPayInSlipPath("/path/for/test/");
+		
+		rightInput.validateAllField();
+		assertEquals("mr", rightInput.getTitle());
+		
+	}
+	
+	@Test(expected = ErrorFieldException.class)
+	public void cannot_input_null_fields_in_registedPerson()throws ErrorFieldException,InvalidDataException{
+		RegistedPerson rightInput = new RegistedPerson();
+		rightInput.setTitle("mr");
+		rightInput.setFirstName("TestFirstName");
+		rightInput.setLastName("TestLastName");
+		rightInput.setBirthDate("2000-11-11");
+		rightInput.setMobile("0123456789");
+		rightInput.setEmail("test@test.com");
+		rightInput.setAddress(null);
+		rightInput.settShirtSize("m");
+		rightInput.settShirtPickUpPoint(null);
+		rightInput.setPayInSlipPath("/path/for/test/");
+		
+		rightInput.validateAllField();
+		assertEquals(null, rightInput.getTitle());
+		
+	}
+	
+	@Test
+	public void can_print_toString()throws InvalidDataException{
+		RegistedPerson registedPerson= new RegistedPerson();
+		registedPerson.setTitle("mr");
+		registedPerson.setFirstName("TestFirstName");
+		registedPerson.setLastName("TestLastName");
+		registedPerson.setBirthDate("2000-11-11");
+		registedPerson.setMobile("0123456789");
+		registedPerson.setEmail("test@test.com");
+		registedPerson.setAddress("address...");
+		registedPerson.settShirtSize("m");
+		registedPerson.settShirtPickUpPoint("aa");
+		registedPerson.setPayInSlipPath("/path/for/test/");
+		
+		assertEquals(registedPerson.toString(),
+				"{mr,TestFirstName,TestLastName,2000-11-11,0123456789,test@test.com,address...,m,aa,/path/for/test/}");
 	}
 }

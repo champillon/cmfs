@@ -1,1 +1,1 @@
-INSERT INTO registedPerson (firstName,lastName) VALUES('Passapong','Thaithatgoon');
+INSERT INTO registedPerson (title,firstName,lastName,birthDate,mobile,email,address,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) VALUES(?,?,?,?,?,?,?,?,?,?,?);

@@ -1,5 +1,6 @@
 package th.or.operationsmile.cmfs.model;
 
+import th.or.operationsmile.cmfs.exception.ErrorFieldException;
 import th.or.operationsmile.cmfs.exception.InvalidDataException;
 
 public class RegistedPerson {
@@ -14,6 +15,7 @@ public class RegistedPerson {
 	private String tShirtSize;
 	private String tShirtPickUpPoint;
 	private String payInSlipPath;
+	private boolean paid = false;
 
 	public String getTitle() {
 		return title;
@@ -26,6 +28,14 @@ public class RegistedPerson {
 			throw new InvalidDataException("Invalid title: " + title);
 		}
 
+	}
+
+	public boolean isPaid() {
+		return paid;
+	}
+
+	public void setPaid(boolean paid) {
+		this.paid = paid;
 	}
 
 	public String getFirstName() {
@@ -128,6 +138,26 @@ public class RegistedPerson {
 
 	public void setPayInSlipPath(String payInSlipPath) {
 		this.payInSlipPath = payInSlipPath;
+	}
+	
+	public void validateAllField()throws ErrorFieldException,InvalidDataException{
+		InputValidation.reValidateRegistedPerson(this);
+	}
+	
+	@Override
+	public String toString(){
+		return "{"+
+					this.getTitle()+","+
+					this.getFirstName()+","+
+					this.getLastName()+","+
+					this.getBirthDate()+","+
+					this.getMobile()+","+
+					this.getEmail()+","+
+					this.getAddress()+","+
+					this.gettShirtSize()+","+
+					this.gettShirtPickUpPoint()+","+
+					this.getPayInSlipPath()+
+				"}";
 	}
 
 }

@@ -9,6 +9,7 @@ email VARCHAR(50),
 address VARCHAR(256),
 tShirtSize VARCHAR(2),
 tShirtPickUpPoint VARCHAR(50),
-payInSlipPath varchar(100),
+payInSlipPath VARCHAR(100),
+paid BOOLEAN,
 PRIMARY KEY (runningId)
 );

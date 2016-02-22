@@ -3,6 +3,9 @@ package th.or.operationsmile.cmfs.model;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import th.or.operationsmile.cmfs.exception.ErrorFieldException;
+import th.or.operationsmile.cmfs.exception.InvalidDataException;
+
 public class InputValidation {
 	private static final String correctTitles[] = { "mr", "mrs", "ms" };
 
@@ -18,8 +21,8 @@ public class InputValidation {
 
 	private static final String correctEmailFormat = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-	
-	private static final String correctTShirtSizes[] = { "s", "m", "l","xl"};
+
+	private static final String correctTShirtSizes[] = { "s", "m", "l", "xl" };
 
 	public static boolean validateTitle(String title) {
 		boolean result = false;
@@ -109,7 +112,7 @@ public class InputValidation {
 	public static boolean validateEmail(String email) {
 		return email.matches(correctEmailFormat);
 	}
-	
+
 	public static boolean validateTShirtSize(String tShirtSize) {
 		boolean result = false;
 
@@ -118,6 +121,68 @@ public class InputValidation {
 				result = true;
 			}
 		}
+
+		return result;
+	}
+
+	public static void reValidateRegistedPerson(RegistedPerson registedPerson)throws ErrorFieldException,InvalidDataException {
+
+		
+		if(registedPersonHaveNoNullField(registedPerson)){
+			reValidateRegistedPersonField(registedPerson);
+		}
+		else{
+			throw new Error("critical invalid condition: "+registedPerson);
+		}
+
+	}
+	
+	private static void reValidateRegistedPersonField(RegistedPerson registedPerson)throws InvalidDataException{
+		validateTitle(registedPerson.getTitle());
+		validateFirstName(registedPerson.getFirstName());
+		validateLastName(registedPerson.getLastName());
+		validateBirthDate(registedPerson.getBirthDate());
+		validateMobile(registedPerson.getMobile());
+		validateEmail(registedPerson.getEmail());
+		validateTShirtSize(registedPerson.gettShirtSize());
+	}
+
+	private static boolean registedPersonHaveNoNullField(RegistedPerson registedPerson)throws ErrorFieldException {
+		boolean result = false;
+		
+			if(registedPerson.getTitle() == null){
+				throw new ErrorFieldException("found null filed","title");
+			}
+			else if(registedPerson.getFirstName() == null){
+				throw new ErrorFieldException("found null filed","firstName");
+			}
+			else if(registedPerson.getLastName() == null){
+				throw new ErrorFieldException("found null filed","lastName");
+			}
+			else if(registedPerson.getBirthDate() == null){
+				throw new ErrorFieldException("found null filed","birthDate");
+			}
+			else if(registedPerson.getMobile() == null){
+				throw new ErrorFieldException("found null filed","mobile");
+			}
+			else if(registedPerson.getEmail() == null){
+				throw new ErrorFieldException("found null filed","email");
+			}
+			else if(registedPerson.getAddress() == null){
+				throw new ErrorFieldException("found null filed","address");
+			}
+			else if(registedPerson.gettShirtSize() == null){
+				throw new ErrorFieldException("found null filed","tShirtSize");
+			}
+			else if(registedPerson.gettShirtPickUpPoint() == null){
+				throw new ErrorFieldException("found null filed","tShirtPickUpPoint");
+			}
+			else if(registedPerson.getPayInSlipPath() == null){
+				throw new ErrorFieldException("found null filed","payInSlipPath");
+			}
+			else{
+				result = true;
+			}
 
 		return result;
 	}
