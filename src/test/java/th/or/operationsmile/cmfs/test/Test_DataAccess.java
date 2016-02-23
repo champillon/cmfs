@@ -26,7 +26,7 @@ public class Test_DataAccess {
 	
 	private static final String insertSQL = "INSERT INTO registedPerson "
 			+ "(title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES('mr',?,'TestLastName','2000-11-11','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
+			+ "VALUES('mr',?,'TestLastName','31-12','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
 	private static final String selectSQL = "SELECT * FROM registedPerson WHERE email = ? ;";
 	private static final String clearUpSQL = "DELETE FROM registedPerson;";
 
@@ -61,7 +61,7 @@ public class Test_DataAccess {
 		rightInput.setTitle("mr");
 		rightInput.setFirstName("TestFirstName");
 		rightInput.setLastName("TestLastName");
-		rightInput.setBirthDate("2000-11-11");
+		rightInput.setBirthDate("31-12");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
 		rightInput.settShirtSize("m");
@@ -79,7 +79,7 @@ public class Test_DataAccess {
 		assertEquals(queryResult.getString("title"), "mr");
 		assertEquals(queryResult.getString("firstName"), "TestFirstName");
 		assertEquals(queryResult.getString("lastName"), "TestLastName");
-		assertEquals(queryResult.getString("birthDate"), "2000-11-11");
+		assertEquals(queryResult.getString("birthDate"), "31-12");
 		assertEquals(queryResult.getString("mobile"), "0123456789");
 		assertEquals(queryResult.getString("email"), "test@test.com");
 		assertEquals(queryResult.getString("tShirtSize"), "m");
@@ -121,7 +121,7 @@ public class Test_DataAccess {
 			assertEquals(registedPerson.getTitle(), "mr");
 			assertEquals(registedPerson.getFirstName(),queryFirstName1 );
 			assertEquals(registedPerson.getLastName(), "TestLastName");
-			assertEquals(registedPerson.getBirthDate(), "2000-11-11");
+			assertEquals(registedPerson.getBirthDate(), "31-12");
 			assertEquals(registedPerson.getMobile(), "0123456789");
 			assertEquals(registedPerson.gettShirtSize(), "m");
 			assertEquals(registedPerson.gettShirtPickUpPoint(), "aa");

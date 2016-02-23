@@ -98,7 +98,7 @@ public class Test_InputData {
 	
 	@Test
 	public void can_input_right_birthDate() throws InvalidDataException {
-		String rightInput = "2012-01-03";
+		String rightInput = "31-12";
 		RegistedPerson registedPerson = null;
 
 		registedPerson = new RegistedPerson();
@@ -109,7 +109,7 @@ public class Test_InputData {
 	
 	@Test(expected = InvalidDataException.class)
 	public void can_input_wrong_birthDate() throws InvalidDataException {
-		String wrongInput[] = {"202-13-11","22202x01-03","202-01-99"};
+		String wrongInput[] = {"99-13","22202x01-03","99-aa"};
 		RegistedPerson registedPerson = null;
 
 		registedPerson = new RegistedPerson();
@@ -218,7 +218,7 @@ public class Test_InputData {
 		rightInput.setTitle("mr");
 		rightInput.setFirstName("TestFirstName");
 		rightInput.setLastName("TestLastName");
-		rightInput.setBirthDate("2000-11-11");
+		rightInput.setBirthDate("31-12");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
 		rightInput.settShirtSize("m");
@@ -236,7 +236,7 @@ public class Test_InputData {
 		rightInput.setTitle("mr");
 		rightInput.setFirstName("TestFirstName");
 		rightInput.setLastName("TestLastName");
-		rightInput.setBirthDate("2000-11-11");
+		rightInput.setBirthDate("31-11");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
 		rightInput.settShirtSize("m");
@@ -254,7 +254,7 @@ public class Test_InputData {
 		registedPerson.setTitle("mr");
 		registedPerson.setFirstName("TestFirstName");
 		registedPerson.setLastName("TestLastName");
-		registedPerson.setBirthDate("2000-11-11");
+		registedPerson.setBirthDate("31-12");
 		registedPerson.setMobile("0123456789");
 		registedPerson.setEmail("test@test.com");
 		registedPerson.settShirtSize("m");
@@ -262,6 +262,6 @@ public class Test_InputData {
 		registedPerson.setPayInSlipPath("/path/for/test/");
 		
 		assertEquals(registedPerson.toString(),
-				"{mr,TestFirstName,TestLastName,2000-11-11,0123456789,test@test.com,m,aa,/path/for/test/}");
+				"{mr,TestFirstName,TestLastName,31-12,0123456789,test@test.com,m,aa,/path/for/test/}");
 	}
 }

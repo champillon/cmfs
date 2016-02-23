@@ -13,8 +13,8 @@ public class InputValidation {
 
 	private static final int lastNameMustNotLongThanThis = 50;
 
-	private static final String correctDateFormat = "yyyy-MM-dd";
-	private static final int birthDateMustLongEqualToThis = 10;
+	private static final String correctDateFormat = "dd-MM";
+	private static final int birthDateMustLongEqualToThis = 5;
 
 	private static final String correctMobileFormat = "[0-9]+";
 	private static final int mobileMustLongEqualToThis = 10;
@@ -74,6 +74,17 @@ public class InputValidation {
 		} catch (ParseException exception) {
 			result = false;
 		}
+		
+		int date = Integer.parseInt(""+birthDate.subSequence(0,2));
+		int month = Integer.parseInt(""+birthDate.subSequence(3,5));
+		
+		if(date>31){
+			result = false;
+		}
+		if(month>12){
+			result = false;
+		}
+				
 		return result;
 	}
 

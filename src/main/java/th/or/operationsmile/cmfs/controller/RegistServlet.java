@@ -91,7 +91,7 @@ public class RegistServlet extends HttpServlet {
 		result.setTitle(request.getParameter("title"));
 		result.setFirstName(request.getParameter("firstName"));
 		result.setLastName(request.getParameter("lastName"));
-		result.setBirthDate(request.getParameter("birthDate"));
+		result.setBirthDate(request.getParameter("birthDate")+"-"+request.getParameter("birthMonth"));
 		result.setMobile(request.getParameter("mobile"));
 		result.setEmail(request.getParameter("email"));
 		result.settShirtSize(request.getParameter("tShirtSize"));
