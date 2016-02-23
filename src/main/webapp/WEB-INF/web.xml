@@ -10,9 +10,19 @@
   	<description></description>
   	<servlet-class>th.or.operationsmile.cmfs.controller.RegistServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>QueryServlet</servlet-name>
+  	<display-name>QueryServlet</display-name>
+  	<description></description>
+  	<servlet-class>th.or.operationsmile.cmfs.controller.QueryServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>RegistServlet</servlet-name>
-  	<url-pattern>/RegistServlet</url-pattern>
+  	<url-pattern>/Regist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>QueryServlet</servlet-name>
+  	<url-pattern>/Query</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
   	<welcome-file>./WEB-INF/regist_form.jsp</welcome-file>

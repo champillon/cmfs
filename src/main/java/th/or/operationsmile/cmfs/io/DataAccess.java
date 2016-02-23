@@ -21,7 +21,8 @@ public class DataAccess {
 			+ "title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
 			+ "VALUES(?,?,?,?,?,?,?,?,?,?);";
 	
-	private static final String selectSQL = "SELECT * FROM registedPerson WHERE firstName = ? ;";
+	private static final String selectSQLwithCondition = "SELECT * FROM registedPerson WHERE firstName = ? ;";
+	private static final String selectSQL = "SELECT * FROM registedPerson;";
 	
 	public DataAccess(Connection databaseConnection){
 		this.databaseConnection = databaseConnection;
@@ -51,9 +52,44 @@ public class DataAccess {
 	
 	}
 
-	public List<RegistedPerson> queryRegistedPersonByName(String queryEmail) throws SQLException {
+	public List<RegistedPerson> queryRegistedPersonByName(String queryName) throws SQLException {
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQLwithCondition);
+		queryResultStatement.setString(1,queryName);
+		ResultSet queryResult = queryResultStatement.executeQuery();
+		
+		List<RegistedPerson> results = new ArrayList<RegistedPerson>();
+		RegistedPerson registedPerson = null;
+
+		while(queryResult.next()){
+			registedPerson = new RegistedPerson();
+						
+			try {
+				registedPerson.setTitle(queryResult.getString("title"));
+				registedPerson.setFirstName(queryResult.getString("firstName"));
+				registedPerson.setLastName(queryResult.getString("lastName"));
+				registedPerson.setBirthDate(queryResult.getString("birthDate"));
+				registedPerson.setMobile(queryResult.getString("mobile"));
+				registedPerson.setEmail(queryResult.getString("email"));
+				registedPerson.settShirtSize(queryResult.getString("tShirtSize"));
+				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
+				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
+				registedPerson.setPaid(queryResult.getBoolean("paid"));
+				
+				results.add(registedPerson);
+				
+			} catch (InvalidDataException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		
+		
+		return results;
+	}
+	
+	public List<RegistedPerson> queryRegistedPerson() throws SQLException {
 		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQL);
-		queryResultStatement.setString(1,queryEmail);
 		ResultSet queryResult = queryResultStatement.executeQuery();
 		
 		List<RegistedPerson> results = new ArrayList<RegistedPerson>();

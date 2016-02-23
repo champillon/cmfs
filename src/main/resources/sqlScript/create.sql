@@ -1,3 +1,5 @@
+CREATE DATABASE cmfs DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+
 CREATE TABLE registedPerson (
 runningId INT AUTO_INCREMENT,
 title VARCHAR(3), 
