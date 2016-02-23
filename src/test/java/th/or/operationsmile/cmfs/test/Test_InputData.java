@@ -221,7 +221,6 @@ public class Test_InputData {
 		rightInput.setBirthDate("2000-11-11");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
-		rightInput.setAddress("address...");
 		rightInput.settShirtSize("m");
 		rightInput.settShirtPickUpPoint("aa");
 		rightInput.setPayInSlipPath("/path/for/test/");
@@ -240,7 +239,6 @@ public class Test_InputData {
 		rightInput.setBirthDate("2000-11-11");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
-		rightInput.setAddress(null);
 		rightInput.settShirtSize("m");
 		rightInput.settShirtPickUpPoint(null);
 		rightInput.setPayInSlipPath("/path/for/test/");
@@ -259,12 +257,11 @@ public class Test_InputData {
 		registedPerson.setBirthDate("2000-11-11");
 		registedPerson.setMobile("0123456789");
 		registedPerson.setEmail("test@test.com");
-		registedPerson.setAddress("address...");
 		registedPerson.settShirtSize("m");
 		registedPerson.settShirtPickUpPoint("aa");
 		registedPerson.setPayInSlipPath("/path/for/test/");
 		
 		assertEquals(registedPerson.toString(),
-				"{mr,TestFirstName,TestLastName,2000-11-11,0123456789,test@test.com,address...,m,aa,/path/for/test/}");
+				"{mr,TestFirstName,TestLastName,2000-11-11,0123456789,test@test.com,m,aa,/path/for/test/}");
 	}
 }

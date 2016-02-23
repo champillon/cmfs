@@ -25,8 +25,8 @@ public class Test_DataAccess {
 	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/cmfs";
 	
 	private static final String insertSQL = "INSERT INTO registedPerson "
-			+ "(title,firstName,lastName,birthDate,mobile,email,address,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES('mr',?,'TestLastName','2000-11-11','0123456789','test@test.com','address...','m','aa','/path/for/test/',FALSE);";
+			+ "(title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
+			+ "VALUES('mr',?,'TestLastName','2000-11-11','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
 	private static final String selectSQL = "SELECT * FROM registedPerson WHERE email = ? ;";
 	private static final String clearUpSQL = "DELETE FROM registedPerson;";
 
@@ -64,7 +64,6 @@ public class Test_DataAccess {
 		rightInput.setBirthDate("2000-11-11");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
-		rightInput.setAddress("address...");
 		rightInput.settShirtSize("m");
 		rightInput.settShirtPickUpPoint("aa");
 		rightInput.setPayInSlipPath("/path/for/test/");
@@ -83,7 +82,6 @@ public class Test_DataAccess {
 		assertEquals(queryResult.getString("birthDate"), "2000-11-11");
 		assertEquals(queryResult.getString("mobile"), "0123456789");
 		assertEquals(queryResult.getString("email"), "test@test.com");
-		assertEquals(queryResult.getString("address"), "address...");
 		assertEquals(queryResult.getString("tShirtSize"), "m");
 		assertEquals(queryResult.getString("tShirtPickUpPoint"), "aa");
 		assertEquals(queryResult.getString("payInSlipPath"), "/path/for/test/");
@@ -125,7 +123,6 @@ public class Test_DataAccess {
 			assertEquals(registedPerson.getLastName(), "TestLastName");
 			assertEquals(registedPerson.getBirthDate(), "2000-11-11");
 			assertEquals(registedPerson.getMobile(), "0123456789");
-			assertEquals(registedPerson.getAddress(), "address...");
 			assertEquals(registedPerson.gettShirtSize(), "m");
 			assertEquals(registedPerson.gettShirtPickUpPoint(), "aa");
 			assertEquals(registedPerson.getPayInSlipPath(), "/path/for/test/");

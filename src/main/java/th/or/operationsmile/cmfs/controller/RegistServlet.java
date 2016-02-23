@@ -94,7 +94,6 @@ public class RegistServlet extends HttpServlet {
 		result.setBirthDate(request.getParameter("birthDate"));
 		result.setMobile(request.getParameter("mobile"));
 		result.setEmail(request.getParameter("email"));
-		result.setAddress(request.getParameter("address"));
 		result.settShirtSize(request.getParameter("tShirtSize"));
 		result.settShirtPickUpPoint(request.getParameter("tShirtPickUpPoint"));
 		result.setPayInSlipPath("/test/path/for/payInSlip");

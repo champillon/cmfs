@@ -168,9 +168,6 @@ public class InputValidation {
 			else if(registedPerson.getEmail() == null){
 				throw new ErrorFieldException("found null filed","email");
 			}
-			else if(registedPerson.getAddress() == null){
-				throw new ErrorFieldException("found null filed","address");
-			}
 			else if(registedPerson.gettShirtSize() == null){
 				throw new ErrorFieldException("found null filed","tShirtSize");
 			}

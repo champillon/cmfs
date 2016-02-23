@@ -11,7 +11,6 @@ public class RegistedPerson {
 	private String birthDate;
 	private String mobile;
 	private String email;
-	private String address;
 	private String tShirtSize;
 	private String tShirtPickUpPoint;
 	private String payInSlipPath;
@@ -107,14 +106,6 @@ public class RegistedPerson {
 		
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String gettShirtSize() {
 		return tShirtSize;
 	}
@@ -158,7 +149,6 @@ public class RegistedPerson {
 					this.getBirthDate()+","+
 					this.getMobile()+","+
 					this.getEmail()+","+
-					this.getAddress()+","+
 					this.gettShirtSize()+","+
 					this.gettShirtPickUpPoint()+","+
 					this.getPayInSlipPath()+

@@ -18,8 +18,8 @@ public class DataAccess {
 	
 	private Connection databaseConnection = null;
 	private static final String insertSQL = "INSERT INTO registedPerson ("
-			+ "title,firstName,lastName,birthDate,mobile,email,address,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES(?,?,?,?,?,?,?,?,?,?,?);";
+			+ "title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
+			+ "VALUES(?,?,?,?,?,?,?,?,?,?);";
 	
 	private static final String selectSQL = "SELECT * FROM registedPerson WHERE firstName = ? ;";
 	
@@ -41,11 +41,10 @@ public class DataAccess {
 		preparedStatement.setString(4, registedPerson.getBirthDate());
 		preparedStatement.setString(5, registedPerson.getMobile());
 		preparedStatement.setString(6, registedPerson.getEmail());
-		preparedStatement.setString(7, registedPerson.getAddress());
-		preparedStatement.setString(8, registedPerson.gettShirtSize());
-		preparedStatement.setString(9, registedPerson.gettShirtPickUpPoint());
-		preparedStatement.setString(10, registedPerson.getPayInSlipPath());
-		preparedStatement.setBoolean(11, registedPerson.isPaid());
+		preparedStatement.setString(7, registedPerson.gettShirtSize());
+		preparedStatement.setString(8, registedPerson.gettShirtPickUpPoint());
+		preparedStatement.setString(9, registedPerson.getPayInSlipPath());
+		preparedStatement.setBoolean(10, registedPerson.isPaid());
 		
 		preparedStatement.executeUpdate();
 		preparedStatement.close();
@@ -70,7 +69,6 @@ public class DataAccess {
 				registedPerson.setBirthDate(queryResult.getString("birthDate"));
 				registedPerson.setMobile(queryResult.getString("mobile"));
 				registedPerson.setEmail(queryResult.getString("email"));
-				registedPerson.setAddress(queryResult.getString("address"));
 				registedPerson.settShirtSize(queryResult.getString("tShirtSize"));
 				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
 				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
