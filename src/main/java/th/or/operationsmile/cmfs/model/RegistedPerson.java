@@ -16,6 +16,11 @@ public class RegistedPerson {
 	private String tShirtPickUpPoint;
 	private String payInSlipPath;
 	private boolean paid = false;
+	private String runnerId;
+
+	public String getRunnerId() {
+		return runnerId;
+	}
 
 	public String getTitle() {
 		return title;

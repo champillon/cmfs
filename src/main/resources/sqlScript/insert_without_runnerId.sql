@@ -1,0 +1,1 @@
+INSERT INTO registedPerson (title,firstName,lastName,birthDate,mobile,email,address,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) VALUES('mr','TestFirstName','TestLastName','2000-11-11','0123456789','test@test.com','address...','m','aa','/path/for/test/',FALSE);

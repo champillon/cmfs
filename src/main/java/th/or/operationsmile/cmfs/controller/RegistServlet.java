@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -20,6 +22,12 @@ import javax.sql.DataSource;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+import th.or.operationsmile.cmfs.exception.ErrorFieldException;
+import th.or.operationsmile.cmfs.exception.InvalidDataException;
+import th.or.operationsmile.cmfs.io.DataAccess;
+import th.or.operationsmile.cmfs.io.EmailSend;
+import th.or.operationsmile.cmfs.model.RegistedPerson;
 
 public class RegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,36 +45,75 @@ public class RegistServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		handleUploadedFile(request, response);
-		handleDatabase();
+		boolean processCompleted = false;
+		// handleUploadedFile(request, response);
+		try {
+			RegistedPerson registedPerson = mapRequestParameter(request);
+			EmailSend.generateAndSendEmail(registedPerson.getEmail(), registedPerson);
+			saveToDatabase(registedPerson);
+			processCompleted = true;
 
-		response.getWriter().append("Served at: ")
-				.append(request.getContextPath() + " " + request.getParameter("address"));
+		} catch (InvalidDataException e) {
+			e.printStackTrace();
+			
+		} catch (AddressException e) {
+			e.printStackTrace();
+
+		} catch (MessagingException e) {
+			e.printStackTrace();
+
+		} catch (NamingException e) {
+			e.printStackTrace();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		} catch (ErrorFieldException e) {
+			e.printStackTrace();
+		}
+
+		if(processCompleted){
+			response.setContentType("text/plain; charset=utf-8");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().append("ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ");
+		}
+		else{
+			response.setContentType("text/plain; charset=utf-8");
+			response.setCharacterEncoding("UTF-8");
+			response.getWriter().append("เกิดข้อผิดพลาด กรูณาลองทำรายการใหม่อีกครั้ง");
+		}
+		
 	}
-	
-	private void handleDatabase(){
-		try{
-			Context initCtx = new InitialContext();
-			Context envCtx = (Context) initCtx.lookup("java:comp/env");
-			DataSource ds = (DataSource)
-			  envCtx.lookup("jdbc/cmfsDB");
 
-			Connection conn = ds.getConnection();
-			System.out.println("champ db: "+conn);
-			Statement statement = conn.createStatement();
-			statement.executeUpdate("INSERT INTO registedPerson (firstName,lastName) VALUES('Passapong','Thaithatgoon');");
-			
-			statement.close();
-			conn.close();
-		}
-		catch(NamingException e){
-			System.out.println(e);
-		}
-		catch(SQLException e){
-			System.out.println(e);
-		}
-			
-	
+	private RegistedPerson mapRequestParameter(HttpServletRequest request) throws InvalidDataException {
+		RegistedPerson result = new RegistedPerson();
+
+		result.setTitle(request.getParameter("title"));
+		result.setFirstName(request.getParameter("firstName"));
+		result.setLastName(request.getParameter("lastName"));
+		result.setBirthDate(request.getParameter("birthDate"));
+		result.setMobile(request.getParameter("mobile"));
+		result.setEmail(request.getParameter("email"));
+		result.setAddress(request.getParameter("address"));
+		result.settShirtSize(request.getParameter("tShirtSize"));
+		result.settShirtPickUpPoint(request.getParameter("tShirtPickUpPoint"));
+		result.setPayInSlipPath("/test/path/for/payInSlip");
+
+		return result;
+	}
+
+	private void saveToDatabase(RegistedPerson registedPerson) throws NamingException, SQLException, ErrorFieldException, InvalidDataException {
+		Context initialContext = new InitialContext();
+		Context environmentContext = (Context) initialContext.lookup("java:comp/env");
+		DataSource dataSource = (DataSource) environmentContext.lookup("jdbc/cmfsDB");
+
+		Connection databaseConnection = dataSource.getConnection();
+		DataAccess dataAccess = new DataAccess(databaseConnection);
+		dataAccess.addRegistedPerson(registedPerson);
+
+		databaseConnection.close();
+		
+
 	}
 
 	private void handleUploadedFile(HttpServletRequest request, HttpServletResponse response) {
@@ -75,14 +122,14 @@ public class RegistServlet extends HttpServlet {
 		int maxFileSize = 50 * 1024;
 		int maxMemSize = 4 * 1024;
 		File file;
-		ServletFileUpload uploadedFile =null;
+		ServletFileUpload uploadedFile = null;
 
 		diskFileItemFactory = new DiskFileItemFactory();
 		diskFileItemFactory.setSizeThreshold(maxMemSize);
 		diskFileItemFactory.setRepository(new File("/tmp"));
-	      
+
 		uploadedFile = new ServletFileUpload(diskFileItemFactory);
-		uploadedFile.setSizeMax( maxFileSize );
+		uploadedFile.setSizeMax(maxFileSize);
 
 		try {
 			// Parse the request to get file items.
@@ -106,7 +153,7 @@ public class RegistServlet extends HttpServlet {
 						file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\") + 1));
 					}
 					fi.write(file);
-					System.out.println("champ: filePath: "+file.getAbsolutePath());
+					System.out.println("champ: filePath: " + file.getAbsolutePath());
 				}
 			}
 		} catch (Exception ex) {
