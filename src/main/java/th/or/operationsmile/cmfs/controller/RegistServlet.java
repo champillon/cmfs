@@ -2,6 +2,7 @@ package th.or.operationsmile.cmfs.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -85,8 +86,10 @@ public class RegistServlet extends HttpServlet {
 		
 	}
 
-	private RegistedPerson mapRequestParameter(HttpServletRequest request) throws InvalidDataException {
+	private RegistedPerson mapRequestParameter(HttpServletRequest request) throws InvalidDataException, UnsupportedEncodingException {
 		RegistedPerson result = new RegistedPerson();
+		
+		request.setCharacterEncoding("UTF-8");
 
 		result.setTitle(request.getParameter("title"));
 		result.setFirstName(request.getParameter("firstName"));
@@ -97,6 +100,8 @@ public class RegistServlet extends HttpServlet {
 		result.settShirtSize(request.getParameter("tShirtSize"));
 		result.settShirtPickUpPoint(request.getParameter("tShirtPickUpPoint"));
 		result.setPayInSlipPath("/test/path/for/payInSlip");
+		
+		
 
 		return result;
 	}
