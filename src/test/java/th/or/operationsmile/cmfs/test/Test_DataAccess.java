@@ -22,7 +22,7 @@ import th.or.operationsmile.cmfs.model.RegistedPerson;
 public class Test_DataAccess {
 	private static final String databaseUsername = "root";
 	private static final String databasePassword = "welcome1";
-	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/cmfs";
+	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/cmfs?useUnicode=true&characterEncoding=utf-8";
 	
 	private static final String insertSQL = "INSERT INTO registedPerson "
 			+ "(title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
@@ -96,7 +96,7 @@ public class Test_DataAccess {
 	public void can_query_correct_registedPerson() throws SQLException{
 		String queryFirstName1 = "TestFirstName1";
 		String queryFirstName2 = "TestFirstName2";
-		String queryFirstName3 = "TestFirstName3";
+		String queryFirstName3 = "ภาษาไทย";
 		List<RegistedPerson> registedPeople = null;
 		
 		PreparedStatement insertStatement = databaseConnection.prepareStatement(insertSQL);
@@ -115,11 +115,12 @@ public class Test_DataAccess {
 		insertStatement3.close();
 		
 		DataAccess dataAccess = new DataAccess(this.databaseConnection);
-		registedPeople = dataAccess.queryRegistedPersonByName(queryFirstName1);
+		registedPeople = dataAccess.queryRegistedPersonByName(queryFirstName3);
 		
 		for(RegistedPerson registedPerson: registedPeople){
+			System.out.println(registedPerson);
 			assertEquals(registedPerson.getTitle(), "mr");
-			assertEquals(registedPerson.getFirstName(),queryFirstName1 );
+			assertEquals(registedPerson.getFirstName(),queryFirstName3 );
 			assertEquals(registedPerson.getLastName(), "TestLastName");
 			assertEquals(registedPerson.getBirthDate(), "31-12");
 			assertEquals(registedPerson.getMobile(), "0123456789");
