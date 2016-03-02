@@ -29,6 +29,7 @@ public class Test_DataAccess {
 			+ "VALUES('mr',?,'TestLastName','31-12','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
 	private static final String selectSQL = "SELECT * FROM registedPerson WHERE email = ? ;";
 	private static final String clearUpSQL = "DELETE FROM registedPerson;";
+	private static final String selectMaxRunnerID = "SELECT max(runnerId) FROM registedPerson;";
 
 	private Connection databaseConnection = null;
 
@@ -118,7 +119,7 @@ public class Test_DataAccess {
 		registedPeople = dataAccess.queryRegistedPersonByName(queryFirstName3);
 		
 		for(RegistedPerson registedPerson: registedPeople){
-			System.out.println(registedPerson);
+
 			assertEquals(registedPerson.getTitle(), "mr");
 			assertEquals(registedPerson.getFirstName(),queryFirstName3 );
 			assertEquals(registedPerson.getLastName(), "TestLastName");
@@ -129,6 +130,44 @@ public class Test_DataAccess {
 			assertEquals(registedPerson.getPayInSlipPath(), "/path/for/test/");
 			assertEquals(registedPerson.isPaid(), false);
 		}		
+		
+		
+	}
+	
+	@Test
+	public void can_confirmed_paySlip() throws SQLException{
+		String queryFirstName1 = "TestFirstName1";
+		String queryFirstName2 = "TestFirstName2";
+		String queryFirstName3 = "ภาษาไทย";
+		List<RegistedPerson> registedPeople = null;
+		RegistedPerson registedPerson = null;
+		
+		PreparedStatement insertStatement = databaseConnection.prepareStatement(insertSQL);
+		insertStatement.setString(1, queryFirstName1);
+		insertStatement.executeUpdate();
+		insertStatement.close();
+		
+		PreparedStatement insertStatement2  = databaseConnection.prepareStatement(insertSQL);
+		insertStatement2.setString(1, queryFirstName2);
+		insertStatement2.executeUpdate();
+		insertStatement2.close();
+		
+		PreparedStatement insertStatement3 = databaseConnection.prepareStatement(insertSQL);
+		insertStatement3.setString(1, queryFirstName3);
+		insertStatement3.executeUpdate();
+		insertStatement3.close();
+		
+		DataAccess dataAccess = new DataAccess(this.databaseConnection);
+		registedPeople = dataAccess.queryRegistedPersonByName(queryFirstName1);
+		registedPerson = registedPeople.get(0);
+		
+		dataAccess.confirmedPaySlipAndGenerateRunningKey(registedPerson);
+		
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectMaxRunnerID);
+		ResultSet queryResult = queryResultStatement.executeQuery();
+
+		queryResult.next();
+		assertEquals(queryResult.getString("max(runnerId)"),registedPerson.getRunnerId());
 		
 		
 	}

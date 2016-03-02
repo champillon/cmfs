@@ -12,6 +12,6 @@ tShirtSize VARCHAR(2),
 tShirtPickUpPoint VARCHAR(50),
 payInSlipPath VARCHAR(100),
 paid BOOLEAN,
-runnerId VARCHAR(4),
+runnerId INT,
 PRIMARY KEY (runningId)
 );

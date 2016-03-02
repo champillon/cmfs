@@ -6,8 +6,11 @@ import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -47,16 +50,18 @@ public class RegistServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		boolean processCompleted = false;
-		// handleUploadedFile(request, response);
+		Map<String, String> requestValueMap = null;
+
 		try {
-			RegistedPerson registedPerson = mapRequestParameter(request);
+			requestValueMap = handleRequestWithUploadedFile(request, response);
+			RegistedPerson registedPerson = mapRequestParameter(requestValueMap);
 			EmailSend.generateAndSendEmail(registedPerson.getEmail(), registedPerson);
 			saveToDatabase(registedPerson);
 			processCompleted = true;
 
 		} catch (InvalidDataException e) {
 			e.printStackTrace();
-			
+
 		} catch (AddressException e) {
 			e.printStackTrace();
 
@@ -73,40 +78,38 @@ public class RegistServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		if(processCompleted){
+		if (processCompleted) {
 			response.setContentType("text/plain; charset=utf-8");
 			response.setCharacterEncoding("UTF-8");
-			response.getWriter().append("ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ");
-		}
-		else{
+			response.getWriter().append(
+					"ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ");
+		} else {
 			response.setContentType("text/plain; charset=utf-8");
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().append("เกิดข้อผิดพลาด กรูณาลองทำรายการใหม่อีกครั้ง");
 		}
-		
+
 	}
 
-	private RegistedPerson mapRequestParameter(HttpServletRequest request) throws InvalidDataException, UnsupportedEncodingException {
+	private RegistedPerson mapRequestParameter(Map<String, String> requestValueMap)
+			throws InvalidDataException, UnsupportedEncodingException {
 		RegistedPerson result = new RegistedPerson();
-		
-		request.setCharacterEncoding("UTF-8");
 
-		result.setTitle(request.getParameter("title"));
-		result.setFirstName(request.getParameter("firstName"));
-		result.setLastName(request.getParameter("lastName"));
-		result.setBirthDate(request.getParameter("birthDate")+"-"+request.getParameter("birthMonth"));
-		result.setMobile(request.getParameter("mobile"));
-		result.setEmail(request.getParameter("email"));
-		result.settShirtSize(request.getParameter("tShirtSize"));
-		result.settShirtPickUpPoint(request.getParameter("tShirtPickUpPoint"));
-		result.setPayInSlipPath("/test/path/for/payInSlip");
-		
-		
+		result.setTitle(requestValueMap.get("title"));
+		result.setFirstName(requestValueMap.get("firstName"));
+		result.setLastName(requestValueMap.get("lastName"));
+		result.setBirthDate(requestValueMap.get("birthDate") + "-" + requestValueMap.get("birthMonth"));
+		result.setMobile(requestValueMap.get("mobile"));
+		result.setEmail(requestValueMap.get("email"));
+		result.settShirtSize(requestValueMap.get("tShirtSize"));
+		result.settShirtPickUpPoint(requestValueMap.get("tShirtPickUpPoint"));
+		result.setPayInSlipPath(requestValueMap.get("payInSlipPath"));
 
 		return result;
 	}
 
-	private void saveToDatabase(RegistedPerson registedPerson) throws NamingException, SQLException, ErrorFieldException, InvalidDataException {
+	private void saveToDatabase(RegistedPerson registedPerson)
+			throws NamingException, SQLException, ErrorFieldException, InvalidDataException {
 		Context initialContext = new InitialContext();
 		Context environmentContext = (Context) initialContext.lookup("java:comp/env");
 		DataSource dataSource = (DataSource) environmentContext.lookup("jdbc/cmfsDB");
@@ -116,17 +119,18 @@ public class RegistServlet extends HttpServlet {
 		dataAccess.addRegistedPerson(registedPerson);
 
 		databaseConnection.close();
-		
 
 	}
 
-	private void handleUploadedFile(HttpServletRequest request, HttpServletResponse response) {
-		String filePath = "/root/";
+	private Map<String, String> handleRequestWithUploadedFile(HttpServletRequest request,
+			HttpServletResponse response) {
+		String filePath = "/var/www/html/uploaded/";
 		DiskFileItemFactory diskFileItemFactory = null;
-		int maxFileSize = 50 * 1024;
+		int maxFileSize = 50 * 1024 * 1024;
 		int maxMemSize = 4 * 1024;
 		File file;
 		ServletFileUpload uploadedFile = null;
+		Map<String, String> result = new HashMap<String, String>();
 
 		diskFileItemFactory = new DiskFileItemFactory();
 		diskFileItemFactory.setSizeThreshold(maxMemSize);
@@ -136,33 +140,35 @@ public class RegistServlet extends HttpServlet {
 		uploadedFile.setSizeMax(maxFileSize);
 
 		try {
-			// Parse the request to get file items.
 			List fileItems = uploadedFile.parseRequest(request);
 
-			// Process the uploaded file items
-			Iterator i = fileItems.iterator();
-			while (i.hasNext()) {
-				FileItem fi = (FileItem) i.next();
-				if (!fi.isFormField()) {
-					// Get the uploaded file parameters
-					String fieldName = fi.getFieldName();
-					String fileName = fi.getName();
-					String contentType = fi.getContentType();
-					boolean isInMemory = fi.isInMemory();
-					long sizeInBytes = fi.getSize();
-					// Write the file
-					if (fileName.lastIndexOf("\\") >= 0) {
-						file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\")));
-					} else {
-						file = new File(filePath + fileName.substring(fileName.lastIndexOf("\\") + 1));
-					}
-					fi.write(file);
-					System.out.println("champ: filePath: " + file.getAbsolutePath());
+			Iterator iterator = fileItems.iterator();
+			while (iterator.hasNext()) {
+				FileItem fileItem = (FileItem) iterator.next();
+				if (!fileItem.isFormField()) {
+
+					String fieldName = fileItem.getFieldName();
+					String contentType = fileItem.getContentType();
+					String fileName = new Date().getTime() + "."+contentType.substring(6,contentType.length());
+					
+					System.out.println("fileName: "+fileName);
+					file = new File(filePath + fileName);
+					fileItem.write(file);
+					
+					result.put("payInSlipPath",fileName);
+				} else {
+					String fieldName = fileItem.getFieldName();
+					String fieldValue = fileItem.getString("UTF-8");
+					System.out.println("fieldName: " + fieldName);
+					System.out.println("fieldValue: " + fieldValue);
+					result.put(fieldName, fieldValue);
 				}
 			}
 		} catch (Exception ex) {
 			System.out.println(ex);
 		}
+		return result;
+
 	}
 
 }

@@ -4,6 +4,8 @@ import th.or.operationsmile.cmfs.exception.ErrorFieldException;
 import th.or.operationsmile.cmfs.exception.InvalidDataException;
 
 public class RegistedPerson {
+	
+	private int runningId;
 
 	private String title;
 	private String firstName;
@@ -16,7 +18,19 @@ public class RegistedPerson {
 	private String payInSlipPath;
 	private boolean paid = false;
 	private String runnerId;
+	
+	public int getRunningId() {
+		return runningId;
+	}
 
+	public void setRunningId(int runningId) {
+		this.runningId = runningId;
+	}
+
+	public void setRunnerId(String runnerId){
+		this.runnerId = runnerId;
+	}
+	
 	public String getRunnerId() {
 		return runnerId;
 	}

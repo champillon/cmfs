@@ -21,9 +21,14 @@ public class DataAccess {
 			+ "title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
 			+ "VALUES(?,?,?,?,?,?,?,?,?,?);";
 	
+	private static final String updateSQLForConfirmedPayment = "UPDATE registedPerson "
+			+ "SET runnerId = ? "
+			+ "WHERE runningId = ?;";
+	private static final String selectMaxRunnerID = "SELECT max(runnerId) FROM registedPerson;";
+	
 	private static final String selectSQLwithCondition = "SELECT * FROM registedPerson WHERE firstName = ? ;";
 	private static final String selectSQL = "SELECT * FROM registedPerson;";
-	
+
 	public DataAccess(Connection databaseConnection){
 		this.databaseConnection = databaseConnection;
 	}
@@ -64,6 +69,7 @@ public class DataAccess {
 			registedPerson = new RegistedPerson();
 						
 			try {
+				registedPerson.setRunningId(queryResult.getInt("runningId"));
 				registedPerson.setTitle(queryResult.getString("title"));
 				registedPerson.setFirstName(queryResult.getString("firstName"));
 				registedPerson.setLastName(queryResult.getString("lastName"));
@@ -74,6 +80,7 @@ public class DataAccess {
 				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
 				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 				registedPerson.setPaid(queryResult.getBoolean("paid"));
+				registedPerson.setRunnerId(queryResult.getString("runnerId"));
 				
 				results.add(registedPerson);
 				
@@ -83,7 +90,8 @@ public class DataAccess {
 			
 		}
 		
-		
+		queryResult.close();
+		queryResultStatement.close();		
 		
 		return results;
 	}
@@ -99,6 +107,7 @@ public class DataAccess {
 			registedPerson = new RegistedPerson();
 						
 			try {
+				registedPerson.setRunningId(queryResult.getInt("runningId"));
 				registedPerson.setTitle(queryResult.getString("title"));
 				registedPerson.setFirstName(queryResult.getString("firstName"));
 				registedPerson.setLastName(queryResult.getString("lastName"));
@@ -118,9 +127,33 @@ public class DataAccess {
 			
 		}
 		
-		
+		queryResult.close();
+		queryResultStatement.close();		
 		
 		return results;
+	}
+	
+	public void confirmedPaySlipAndGenerateRunningKey(RegistedPerson registedPerson) throws SQLException{
+		int maxRunnerId;
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectMaxRunnerID);
+		ResultSet queryResult = queryResultStatement.executeQuery();
+		
+		queryResult.next();
+		maxRunnerId = queryResult.getInt("max(runnerId)");
+		
+		maxRunnerId++;
+		registedPerson.setRunnerId(maxRunnerId+"");
+		
+		queryResult.close();
+		queryResultStatement.close();
+		
+		PreparedStatement updateResultStatement = databaseConnection.prepareStatement(updateSQLForConfirmedPayment);
+		updateResultStatement.setString(1,registedPerson.getRunnerId());
+		updateResultStatement.setInt(2,registedPerson.getRunningId());
+		
+		updateResultStatement.executeUpdate();
+		updateResultStatement.close();
+		
 	}
 
 }

@@ -22,7 +22,7 @@
 		5.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และข้อควรทราบต่างๆ
 	</div>
 	<div id="content">
-		<form id="regist_form" action="./Regist" method="POST">
+		<form id="regist_form" action="./Regist" method="POST"  enctype="multipart/form-data">
 			Title*: 
 				<input type="radio" name="title" value="mr"> Mr 
 				<input type="radio" name="title" value="mrs"> Mrs 
