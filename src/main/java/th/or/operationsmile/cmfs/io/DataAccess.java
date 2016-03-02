@@ -1,7 +1,5 @@
 package th.or.operationsmile.cmfs.io;
 
-
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,32 +13,34 @@ import th.or.operationsmile.cmfs.model.InputValidation;
 import th.or.operationsmile.cmfs.model.RegistedPerson;
 
 public class DataAccess {
-	
+
 	private Connection databaseConnection = null;
 	private static final String insertSQL = "INSERT INTO registedPerson ("
 			+ "title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
 			+ "VALUES(?,?,?,?,?,?,?,?,?,?);";
-	
-	private static final String updateSQLForConfirmedPayment = "UPDATE registedPerson "
-			+ "SET runnerId = ? "
+
+	private static final String updateSQLForConfirmedPayment = "UPDATE registedPerson " 
+			+ "SET paid = TRUE, runnerId = ? "
 			+ "WHERE runningId = ?;";
 	private static final String selectMaxRunnerID = "SELECT max(runnerId) FROM registedPerson;";
-	
-	private static final String selectSQLwithCondition = "SELECT * FROM registedPerson WHERE firstName = ? ;";
+
+	private static final String selectSQLwithFirstName = "SELECT * FROM registedPerson WHERE firstName = ? ;";
+	private static final String selectSQLwithRunningId = "SELECT * FROM registedPerson WHERE runningId = ? ;";
 	private static final String selectSQL = "SELECT * FROM registedPerson;";
 
-	public DataAccess(Connection databaseConnection){
+	public DataAccess(Connection databaseConnection) {
 		this.databaseConnection = databaseConnection;
 	}
-	
-	public void addRegistedPerson(RegistedPerson registedPerson) throws ErrorFieldException, InvalidDataException, SQLException{
+
+	public void addRegistedPerson(RegistedPerson registedPerson)
+			throws ErrorFieldException, InvalidDataException, SQLException {
 		InputValidation.reValidateRegistedPerson(registedPerson);
 		this.insertToDatabase(registedPerson);
 	}
-	
+
 	private void insertToDatabase(RegistedPerson registedPerson) throws SQLException {
 		PreparedStatement preparedStatement = databaseConnection.prepareStatement(insertSQL);
-		
+
 		preparedStatement.setString(1, registedPerson.getTitle());
 		preparedStatement.setString(2, registedPerson.getFirstName());
 		preparedStatement.setString(3, registedPerson.getLastName());
@@ -52,22 +52,95 @@ public class DataAccess {
 		preparedStatement.setString(9, registedPerson.getPayInSlipPath());
 		preparedStatement.setBoolean(10, registedPerson.isPaid());
 		
+
 		preparedStatement.executeUpdate();
 		preparedStatement.close();
-	
+
 	}
 
-	public List<RegistedPerson> queryRegistedPersonByName(String queryName) throws SQLException {
-		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQLwithCondition);
-		queryResultStatement.setString(1,queryName);
+	public List<RegistedPerson> queryRegistedPersonByFirstName(String queryName) throws SQLException {
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQLwithFirstName);
+		queryResultStatement.setString(1, queryName);
 		ResultSet queryResult = queryResultStatement.executeQuery();
-		
+
 		List<RegistedPerson> results = new ArrayList<RegistedPerson>();
 		RegistedPerson registedPerson = null;
 
-		while(queryResult.next()){
+		while (queryResult.next()) {
 			registedPerson = new RegistedPerson();
-						
+
+			try {
+				registedPerson.setRunningId(queryResult.getInt("runningId"));
+				registedPerson.setTitle(queryResult.getString("title"));
+				registedPerson.setFirstName(queryResult.getString("firstName"));
+				registedPerson.setLastName(queryResult.getString("lastName"));
+				registedPerson.setBirthDate(queryResult.getString("birthDate"));
+				registedPerson.setMobile(queryResult.getString("mobile"));
+				registedPerson.setEmail(queryResult.getString("email"));
+				registedPerson.settShirtSize(queryResult.getString("tShirtSize"));
+				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
+				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
+				registedPerson.setPaid(queryResult.getBoolean("paid"));
+				registedPerson.setRunnerId(queryResult.getString("runnerId"));
+
+				results.add(registedPerson);
+
+			} catch (InvalidDataException e) {
+				e.printStackTrace();
+			}
+
+		}
+
+		queryResult.close();
+		queryResultStatement.close();
+
+		return results;
+	}
+
+	public RegistedPerson queryRegistedPersonByRunningId(int queryRunningId) throws SQLException {
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQLwithRunningId);
+		queryResultStatement.setInt(1, queryRunningId);
+		ResultSet queryResult = queryResultStatement.executeQuery();
+
+		RegistedPerson result = null;
+
+		queryResult.next();
+		result = new RegistedPerson();
+
+		try {
+			result.setRunningId(queryResult.getInt("runningId"));
+			result.setTitle(queryResult.getString("title"));
+			result.setFirstName(queryResult.getString("firstName"));
+			result.setLastName(queryResult.getString("lastName"));
+			result.setBirthDate(queryResult.getString("birthDate"));
+			result.setMobile(queryResult.getString("mobile"));
+			result.setEmail(queryResult.getString("email"));
+			result.settShirtSize(queryResult.getString("tShirtSize"));
+			result.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
+			result.setPayInSlipPath(queryResult.getString("payInSlipPath"));
+			result.setPaid(queryResult.getBoolean("paid"));
+			result.setRunnerId(queryResult.getString("runnerId"));
+
+		} catch (InvalidDataException e) {
+			e.printStackTrace();
+		}
+
+		queryResult.close();
+		queryResultStatement.close();
+
+		return result;
+	}
+
+	public List<RegistedPerson> queryRegistedPerson() throws SQLException {
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQL);
+		ResultSet queryResult = queryResultStatement.executeQuery();
+
+		List<RegistedPerson> results = new ArrayList<RegistedPerson>();
+		RegistedPerson registedPerson = null;
+
+		while (queryResult.next()) {
+			registedPerson = new RegistedPerson();
+
 			try {
 				registedPerson.setRunningId(queryResult.getInt("runningId"));
 				registedPerson.setTitle(queryResult.getString("title"));
@@ -83,77 +156,40 @@ public class DataAccess {
 				registedPerson.setRunnerId(queryResult.getString("runnerId"));
 				
 				results.add(registedPerson);
-				
-			} catch (InvalidDataException e) {
-				e.printStackTrace();
-			}
-			
-		}
-		
-		queryResult.close();
-		queryResultStatement.close();		
-		
-		return results;
-	}
-	
-	public List<RegistedPerson> queryRegistedPerson() throws SQLException {
-		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQL);
-		ResultSet queryResult = queryResultStatement.executeQuery();
-		
-		List<RegistedPerson> results = new ArrayList<RegistedPerson>();
-		RegistedPerson registedPerson = null;
 
-		while(queryResult.next()){
-			registedPerson = new RegistedPerson();
-						
-			try {
-				registedPerson.setRunningId(queryResult.getInt("runningId"));
-				registedPerson.setTitle(queryResult.getString("title"));
-				registedPerson.setFirstName(queryResult.getString("firstName"));
-				registedPerson.setLastName(queryResult.getString("lastName"));
-				registedPerson.setBirthDate(queryResult.getString("birthDate"));
-				registedPerson.setMobile(queryResult.getString("mobile"));
-				registedPerson.setEmail(queryResult.getString("email"));
-				registedPerson.settShirtSize(queryResult.getString("tShirtSize"));
-				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
-				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
-				registedPerson.setPaid(queryResult.getBoolean("paid"));
-				
-				results.add(registedPerson);
-				
 			} catch (InvalidDataException e) {
 				e.printStackTrace();
 			}
-			
+
 		}
-		
+
 		queryResult.close();
-		queryResultStatement.close();		
-		
+		queryResultStatement.close();
+
 		return results;
 	}
-	
-	public void confirmedPaySlipAndGenerateRunningKey(RegistedPerson registedPerson) throws SQLException{
+
+	public void confirmedPaySlipAndGenerateRunningKey(RegistedPerson registedPerson) throws SQLException {
 		int maxRunnerId;
 		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectMaxRunnerID);
 		ResultSet queryResult = queryResultStatement.executeQuery();
-		
+
 		queryResult.next();
 		maxRunnerId = queryResult.getInt("max(runnerId)");
-		
+
 		maxRunnerId++;
-		registedPerson.setRunnerId(maxRunnerId+"");
-		
+		registedPerson.setRunnerId(maxRunnerId + "");
+
 		queryResult.close();
 		queryResultStatement.close();
-		
+
 		PreparedStatement updateResultStatement = databaseConnection.prepareStatement(updateSQLForConfirmedPayment);
-		updateResultStatement.setString(1,registedPerson.getRunnerId());
-		updateResultStatement.setInt(2,registedPerson.getRunningId());
-		
+		updateResultStatement.setString(1, registedPerson.getRunnerId());
+		updateResultStatement.setInt(2, registedPerson.getRunningId());
+
 		updateResultStatement.executeUpdate();
 		updateResultStatement.close();
-		
+
 	}
 
 }

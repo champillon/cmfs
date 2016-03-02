@@ -116,7 +116,7 @@ public class Test_DataAccess {
 		insertStatement3.close();
 		
 		DataAccess dataAccess = new DataAccess(this.databaseConnection);
-		registedPeople = dataAccess.queryRegistedPersonByName(queryFirstName3);
+		registedPeople = dataAccess.queryRegistedPersonByFirstName(queryFirstName3);
 		
 		for(RegistedPerson registedPerson: registedPeople){
 
@@ -158,7 +158,7 @@ public class Test_DataAccess {
 		insertStatement3.close();
 		
 		DataAccess dataAccess = new DataAccess(this.databaseConnection);
-		registedPeople = dataAccess.queryRegistedPersonByName(queryFirstName1);
+		registedPeople = dataAccess.queryRegistedPersonByFirstName(queryFirstName1);
 		registedPerson = registedPeople.get(0);
 		
 		dataAccess.confirmedPaySlipAndGenerateRunningKey(registedPerson);

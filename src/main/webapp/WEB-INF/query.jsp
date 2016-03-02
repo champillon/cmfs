@@ -12,6 +12,7 @@
 <body>
 	<table border="1">
 		<tr>
+			<th>#</th>
 			<th>Title</th>
 			<th>First Name</th>
 			<th>Last Name</th>
@@ -21,9 +22,12 @@
 			<th>T-Shirt Size</th>
 			<th>T-Shirt Pick-Up Point</th>
 			<th>Uploaded Pay Slip</th>
+			<th>Runner ID</th>
+			<th>Confirm PaySlip</th>
 		</tr>
 		<c:forEach var="registedPerson" items="${requestScope.registedPeople}">
 			<tr>
+				<td><c:out value="${registedPerson.runningId}" /></td>
 				<td><c:out value="${registedPerson.title}" /></td>
 				<td><c:out value="${registedPerson.firstName}" /></td>
 				<td><c:out value="${registedPerson.lastName}" /></td>
@@ -32,7 +36,23 @@
 				<td><c:out value="${registedPerson.email}" /></td>
 				<td><c:out value="${registedPerson.tShirtSize}" /></td>
 				<td><c:out value="${registedPerson.tShirtPickUpPoint}" /></td>
-				<td><c:out value="${registedPerson.payInSlipPath}" /></td>
+				<td>
+					<a href="http://newsletter.operationsmile.or.th/uploaded/${registedPerson.payInSlipPath}" 
+						target="_blank">
+						<c:out value="${registedPerson.payInSlipPath}" />
+					</a>
+				</td>
+				<td>
+					<c:out value="${registedPerson.runnerId}" />
+				</td>
+				<td>
+					<form action="./Update" method="post">
+						<input type="hidden" name="runningId" value="${registedPerson.runningId}">
+						<c:if test="${empty registedPerson.runnerId }">
+							<input type="submit" value="Confirm Payment">
+						</c:if>
+					</form>	
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
