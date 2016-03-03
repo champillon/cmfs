@@ -30,6 +30,8 @@
 			<br/> 
 			First Name*:	<input type="text" name="firstName"><br/>
 			Last Name*: <input type="text" name="lastName" /><br/> 
+                        First Name English*:	<input type="text" name="firstNameEn"><br/>
+			Last Name Egnlish*: <input type="text" name="lastNameEn" /><br/> 
 			Date of Birth:
 				<select name="birthDate">
 					<option value="01">1</option>

@@ -25,8 +25,8 @@ public class Test_DataAccess {
 	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/cmfs?useUnicode=true&characterEncoding=utf-8";
 	
 	private static final String insertSQL = "INSERT INTO registedPerson "
-			+ "(title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES('mr',?,'TestLastName','31-12','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
+			+ "(title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
+			+ "VALUES('mr',?,'TestLastName','TestFirstNameEn','TestLastNameEn','31-12','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
 	private static final String selectSQL = "SELECT * FROM registedPerson WHERE email = ? ;";
 	private static final String clearUpSQL = "DELETE FROM registedPerson;";
 	private static final String selectMaxRunnerID = "SELECT max(runnerId) FROM registedPerson;";
@@ -62,6 +62,8 @@ public class Test_DataAccess {
 		rightInput.setTitle("mr");
 		rightInput.setFirstName("TestFirstName");
 		rightInput.setLastName("TestLastName");
+                rightInput.setFirstNameEn("TestFirstNameEn");
+		rightInput.setLastNameEn("TestLastNameEn");
 		rightInput.setBirthDate("31-12");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
@@ -80,6 +82,8 @@ public class Test_DataAccess {
 		assertEquals(queryResult.getString("title"), "mr");
 		assertEquals(queryResult.getString("firstName"), "TestFirstName");
 		assertEquals(queryResult.getString("lastName"), "TestLastName");
+                assertEquals(queryResult.getString("firstNameEn"), "TestFirstNameEn");
+		assertEquals(queryResult.getString("lastNameEn"), "TestLastNameEn");
 		assertEquals(queryResult.getString("birthDate"), "31-12");
 		assertEquals(queryResult.getString("mobile"), "0123456789");
 		assertEquals(queryResult.getString("email"), "test@test.com");

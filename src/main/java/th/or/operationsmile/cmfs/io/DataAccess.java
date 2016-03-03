@@ -16,8 +16,8 @@ public class DataAccess {
 
 	private Connection databaseConnection = null;
 	private static final String insertSQL = "INSERT INTO registedPerson ("
-			+ "title,firstName,lastName,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES(?,?,?,?,?,?,?,?,?,?);";
+			+ "title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
+			+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?);";
 
 	private static final String updateSQLForConfirmedPayment = "UPDATE registedPerson " 
 			+ "SET paid = TRUE, runnerId = ? "
@@ -44,13 +44,15 @@ public class DataAccess {
 		preparedStatement.setString(1, registedPerson.getTitle());
 		preparedStatement.setString(2, registedPerson.getFirstName());
 		preparedStatement.setString(3, registedPerson.getLastName());
-		preparedStatement.setString(4, registedPerson.getBirthDate());
-		preparedStatement.setString(5, registedPerson.getMobile());
-		preparedStatement.setString(6, registedPerson.getEmail());
-		preparedStatement.setString(7, registedPerson.gettShirtSize());
-		preparedStatement.setString(8, registedPerson.gettShirtPickUpPoint());
-		preparedStatement.setString(9, registedPerson.getPayInSlipPath());
-		preparedStatement.setBoolean(10, registedPerson.isPaid());
+                preparedStatement.setString(4, registedPerson.getFirstNameEn());
+		preparedStatement.setString(5, registedPerson.getLastNameEn());
+		preparedStatement.setString(6, registedPerson.getBirthDate());
+		preparedStatement.setString(7, registedPerson.getMobile());
+		preparedStatement.setString(8, registedPerson.getEmail());
+		preparedStatement.setString(9, registedPerson.gettShirtSize());
+		preparedStatement.setString(10, registedPerson.gettShirtPickUpPoint());
+		preparedStatement.setString(11, registedPerson.getPayInSlipPath());
+		preparedStatement.setBoolean(12, registedPerson.isPaid());
 		
 
 		preparedStatement.executeUpdate();

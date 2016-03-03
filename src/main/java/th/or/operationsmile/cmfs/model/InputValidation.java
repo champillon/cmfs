@@ -23,6 +23,8 @@ public class InputValidation {
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
 	private static final String correctTShirtSizes[] = { "s", "m", "l", "xl" };
+        
+        private static final String nameEnlishFormat = "[a-zA-Z]+";
 
 	public static boolean validateTitle(String title) {
 		boolean result = false;
@@ -55,6 +57,22 @@ public class InputValidation {
 			return false;
 		}
 	}
+        
+        public static boolean validateFirstNameEn(String firstNameEn){
+            return firstNameEn.length() < firstNameMustNotLongThanThis;
+        }
+        
+        public static boolean validateLastNameEn(String lastNameEn){
+            return lastNameEn.length() < lastNameMustNotLongThanThis;
+        }
+        
+        public static boolean validateFirstNameEnFormat(String firstNameEn){
+            return firstNameEn.matches(nameEnlishFormat);
+        }
+        
+        public static boolean validateLastNameEnFormat(String lastNameEn){
+            return lastNameEn.matches(nameEnlishFormat);
+        }
 
 	public static boolean validateBirthDate(String birthDate) {
 		boolean result = false;
@@ -152,6 +170,8 @@ public class InputValidation {
 		validateTitle(registedPerson.getTitle());
 		validateFirstName(registedPerson.getFirstName());
 		validateLastName(registedPerson.getLastName());
+                validateFirstNameEn(registedPerson.getFirstNameEn());
+                validateLastNameEn(registedPerson.getLastNameEn());
 		validateBirthDate(registedPerson.getBirthDate());
 		validateMobile(registedPerson.getMobile());
 		validateEmail(registedPerson.getEmail());
@@ -170,6 +190,12 @@ public class InputValidation {
 			else if(registedPerson.getLastName() == null){
 				throw new ErrorFieldException("found null filed","lastName");
 			}
+                        else if(registedPerson.getFirstNameEn() == null){
+                            throw new ErrorFieldException("found null filed","firstNameEn");
+                        }
+                        else if(registedPerson.getLastNameEn() == null){
+                            throw new ErrorFieldException("found null filed","lastNameEn");
+                        }
 			else if(registedPerson.getBirthDate() == null){
 				throw new ErrorFieldException("found null filed","birthDate");
 			}

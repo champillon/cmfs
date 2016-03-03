@@ -218,6 +218,8 @@ public class Test_InputData {
 		rightInput.setTitle("mr");
 		rightInput.setFirstName("TestFirstName");
 		rightInput.setLastName("TestLastName");
+                rightInput.setFirstNameEn("TestFirstNameEn");
+		rightInput.setLastNameEn("TestLastNameEn");
 		rightInput.setBirthDate("31-12");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
@@ -254,6 +256,8 @@ public class Test_InputData {
 		registedPerson.setTitle("mr");
 		registedPerson.setFirstName("TestFirstName");
 		registedPerson.setLastName("TestLastName");
+                registedPerson.setFirstNameEn("TestFirstNameEn");
+		registedPerson.setLastNameEn("TestLastNameEn");
 		registedPerson.setBirthDate("31-12");
 		registedPerson.setMobile("0123456789");
 		registedPerson.setEmail("test@test.com");
@@ -262,6 +266,6 @@ public class Test_InputData {
 		registedPerson.setPayInSlipPath("/path/for/test/");
 		
 		assertEquals(registedPerson.toString(),
-				"{mr,TestFirstName,TestLastName,31-12,0123456789,test@test.com,m,aa,/path/for/test/}");
+				"{mr,TestFirstName,TestLastName,TestFirstNameEn,TestLastNameEn,31-12,0123456789,test@test.com,m,aa,/path/for/test/}");
 	}
 }

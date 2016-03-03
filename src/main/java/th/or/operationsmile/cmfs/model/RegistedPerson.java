@@ -10,6 +10,8 @@ public class RegistedPerson {
 	private String title;
 	private String firstName;
 	private String lastName;
+        private String firstNameEn;
+        private String lastNameEn;
 	private String birthDate;
 	private String mobile;
 	private String email;
@@ -80,6 +82,30 @@ public class RegistedPerson {
 			throw new InvalidDataException("Invalid lastName: " + lastName);
 		}
 	}
+
+        public String getFirstNameEn() {
+            return firstNameEn;
+        }
+
+        public void setFirstNameEn(String firstNameEn) throws InvalidDataException {
+            if(InputValidation.validateFirstNameEn(firstNameEn)){
+                this.firstNameEn = firstNameEn;
+            }else{
+                throw new InvalidDataException("Invalid firstNameEn: " + firstNameEn);
+            }
+        }
+
+        public String getLastNameEn() {
+            return lastNameEn;
+        }
+
+        public void setLastNameEn(String lastNameEn) throws InvalidDataException {
+            if(InputValidation.validateFirstNameEn(lastNameEn)){
+                this.lastNameEn = lastNameEn;
+            }else{
+                throw new InvalidDataException("Invalid lastNameEn: " + lastNameEn);
+            }
+        }
 
 	public String getBirthDate() {
 		return birthDate;
@@ -153,13 +179,15 @@ public class RegistedPerson {
 	public void validateAllField()throws ErrorFieldException,InvalidDataException{
 		InputValidation.reValidateRegistedPerson(this);
 	}
-	
-	@Override
+
+    @Override
 	public String toString(){
 		return "{"+
 					this.getTitle()+","+
 					this.getFirstName()+","+
 					this.getLastName()+","+
+                                        this.getFirstNameEn()+","+
+					this.getLastNameEn()+","+
 					this.getBirthDate()+","+
 					this.getMobile()+","+
 					this.getEmail()+","+
@@ -168,5 +196,7 @@ public class RegistedPerson {
 					this.getPayInSlipPath()+
 				"}";
 	}
+	
+	
 
 }

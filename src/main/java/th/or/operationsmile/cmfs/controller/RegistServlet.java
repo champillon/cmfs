@@ -98,6 +98,8 @@ public class RegistServlet extends HttpServlet {
 		result.setTitle(requestValueMap.get("title"));
 		result.setFirstName(requestValueMap.get("firstName"));
 		result.setLastName(requestValueMap.get("lastName"));
+                result.setFirstNameEn(requestValueMap.get("firstNameEn"));
+		result.setLastNameEn(requestValueMap.get("lastNameEn"));
 		result.setBirthDate(requestValueMap.get("birthDate") + "-" + requestValueMap.get("birthMonth"));
 		result.setMobile(requestValueMap.get("mobile"));
 		result.setEmail(requestValueMap.get("email"));
