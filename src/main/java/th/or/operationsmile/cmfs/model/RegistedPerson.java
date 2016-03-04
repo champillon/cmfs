@@ -4,14 +4,14 @@ import th.or.operationsmile.cmfs.exception.ErrorFieldException;
 import th.or.operationsmile.cmfs.exception.InvalidDataException;
 
 public class RegistedPerson {
-	
+
 	private int runningId;
 
 	private String title;
 	private String firstName;
 	private String lastName;
-        private String firstNameEn;
-        private String lastNameEn;
+	private String firstNameEn;
+	private String lastNameEn;
 	private String birthDate;
 	private String mobile;
 	private String email;
@@ -20,7 +20,7 @@ public class RegistedPerson {
 	private String payInSlipPath;
 	private boolean paid = false;
 	private String runnerId;
-	
+
 	public int getRunningId() {
 		return runningId;
 	}
@@ -29,10 +29,10 @@ public class RegistedPerson {
 		this.runningId = runningId;
 	}
 
-	public void setRunnerId(String runnerId){
+	public void setRunnerId(String runnerId) {
 		this.runnerId = runnerId;
 	}
-	
+
 	public String getRunnerId() {
 		return runnerId;
 	}
@@ -83,29 +83,29 @@ public class RegistedPerson {
 		}
 	}
 
-        public String getFirstNameEn() {
-            return firstNameEn;
-        }
+	public String getFirstNameEn() {
+		return firstNameEn;
+	}
 
-        public void setFirstNameEn(String firstNameEn) throws InvalidDataException {
-            if(InputValidation.validateFirstNameEn(firstNameEn)){
-                this.firstNameEn = firstNameEn;
-            }else{
-                throw new InvalidDataException("Invalid firstNameEn: " + firstNameEn);
-            }
-        }
+	public void setFirstNameEn(String firstNameEn) throws InvalidDataException {
+		if (InputValidation.validateFirstNameEn(firstNameEn)) {
+			this.firstNameEn = firstNameEn;
+		} else {
+			throw new InvalidDataException("Invalid firstNameEn: " + firstNameEn);
+		}
+	}
 
-        public String getLastNameEn() {
-            return lastNameEn;
-        }
+	public String getLastNameEn() {
+		return lastNameEn;
+	}
 
-        public void setLastNameEn(String lastNameEn) throws InvalidDataException {
-            if(InputValidation.validateFirstNameEn(lastNameEn)){
-                this.lastNameEn = lastNameEn;
-            }else{
-                throw new InvalidDataException("Invalid lastNameEn: " + lastNameEn);
-            }
-        }
+	public void setLastNameEn(String lastNameEn) throws InvalidDataException {
+		if (InputValidation.validateFirstNameEn(lastNameEn)) {
+			this.lastNameEn = lastNameEn;
+		} else {
+			throw new InvalidDataException("Invalid lastNameEn: " + lastNameEn);
+		}
+	}
 
 	public String getBirthDate() {
 		return birthDate;
@@ -137,27 +137,27 @@ public class RegistedPerson {
 		return email;
 	}
 
-	public void setEmail(String email)throws InvalidDataException {
+	public void setEmail(String email) throws InvalidDataException {
 		if (InputValidation.validateEmail(email)) {
 			this.email = email;
 		} else {
 			throw new InvalidDataException("Invalid email: " + email);
 		}
-		
+
 	}
 
 	public String gettShirtSize() {
 		return tShirtSize;
 	}
 
-	public void settShirtSize(String tShirtSize)throws InvalidDataException {
-		
+	public void settShirtSize(String tShirtSize) throws InvalidDataException {
+
 		if (InputValidation.validateTShirtSize(tShirtSize)) {
 			this.tShirtSize = tShirtSize;
 		} else {
 			throw new InvalidDataException("Invalid tShirtSize: " + tShirtSize);
 		}
-		
+
 	}
 
 	public String gettShirtPickUpPoint() {
@@ -175,28 +175,17 @@ public class RegistedPerson {
 	public void setPayInSlipPath(String payInSlipPath) {
 		this.payInSlipPath = payInSlipPath;
 	}
-	
-	public void validateAllField()throws ErrorFieldException,InvalidDataException{
+
+	public void validateAllField() throws ErrorFieldException, InvalidDataException {
 		InputValidation.reValidateRegistedPerson(this);
 	}
 
-    @Override
-	public String toString(){
-		return "{"+
-					this.getTitle()+","+
-					this.getFirstName()+","+
-					this.getLastName()+","+
-                                        this.getFirstNameEn()+","+
-					this.getLastNameEn()+","+
-					this.getBirthDate()+","+
-					this.getMobile()+","+
-					this.getEmail()+","+
-					this.gettShirtSize()+","+
-					this.gettShirtPickUpPoint()+","+
-					this.getPayInSlipPath()+
-				"}";
+	@Override
+	public String toString() {
+		return "{" + this.getTitle() + "," + this.getFirstName() + "," + this.getLastName() + ","
+				+ this.getFirstNameEn() + "," + this.getLastNameEn() + "," + this.getBirthDate() + ","
+				+ this.getMobile() + "," + this.getEmail() + "," + this.gettShirtSize() + ","
+				+ this.gettShirtPickUpPoint() + "," + this.getPayInSlipPath() + "}";
 	}
-	
-	
 
 }

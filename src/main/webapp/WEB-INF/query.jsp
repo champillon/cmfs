@@ -16,6 +16,8 @@
 			<th>Title</th>
 			<th>First Name</th>
 			<th>Last Name</th>
+			<th>First Name (Eng)</th>
+			<th>Last Name (Eng)</th>
 			<th>Birth Date</th>
 			<th>Mobile</th>
 			<th>e-Mail</th>
@@ -31,6 +33,8 @@
 				<td><c:out value="${registedPerson.title}" /></td>
 				<td><c:out value="${registedPerson.firstName}" /></td>
 				<td><c:out value="${registedPerson.lastName}" /></td>
+				<td><c:out value="${registedPerson.firstNameEn}" /></td>
+				<td><c:out value="${registedPerson.lastNameEn}" /></td>
 				<td><c:out value="${registedPerson.birthDate}" /></td>
 				<td><c:out value="${registedPerson.mobile}" /></td>
 				<td><c:out value="${registedPerson.email}" /></td>

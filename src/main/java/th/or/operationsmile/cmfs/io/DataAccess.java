@@ -76,6 +76,8 @@ public class DataAccess {
 				registedPerson.setTitle(queryResult.getString("title"));
 				registedPerson.setFirstName(queryResult.getString("firstName"));
 				registedPerson.setLastName(queryResult.getString("lastName"));
+				registedPerson.setFirstNameEn(queryResult.getString("firstNameEn"));
+				registedPerson.setLastNameEn(queryResult.getString("lastNameEn"));
 				registedPerson.setBirthDate(queryResult.getString("birthDate"));
 				registedPerson.setMobile(queryResult.getString("mobile"));
 				registedPerson.setEmail(queryResult.getString("email"));
@@ -114,6 +116,8 @@ public class DataAccess {
 			result.setTitle(queryResult.getString("title"));
 			result.setFirstName(queryResult.getString("firstName"));
 			result.setLastName(queryResult.getString("lastName"));
+			result.setFirstNameEn(queryResult.getString("firstNameEn"));
+			result.setLastNameEn(queryResult.getString("lastNameEn"));
 			result.setBirthDate(queryResult.getString("birthDate"));
 			result.setMobile(queryResult.getString("mobile"));
 			result.setEmail(queryResult.getString("email"));
@@ -148,6 +152,8 @@ public class DataAccess {
 				registedPerson.setTitle(queryResult.getString("title"));
 				registedPerson.setFirstName(queryResult.getString("firstName"));
 				registedPerson.setLastName(queryResult.getString("lastName"));
+				registedPerson.setFirstNameEn(queryResult.getString("firstNameEn"));
+				registedPerson.setLastNameEn(queryResult.getString("lastNameEn"));
 				registedPerson.setBirthDate(queryResult.getString("birthDate"));
 				registedPerson.setMobile(queryResult.getString("mobile"));
 				registedPerson.setEmail(queryResult.getString("email"));
