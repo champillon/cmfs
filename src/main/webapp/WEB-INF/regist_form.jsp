@@ -41,7 +41,7 @@
 			<br/> 
 			นามสกุล ภาษาไทย: <input type="text" name="lastName" /><br/> 
 			<br/> 
-            <span style="color: orange;">ชื่อ ภาษาอังกฤษ (First Name in English)*</span>:	<input type="text" name="firstNameEn"><br/>
+            ชื่อ ภาษาอังกฤษ (First Name in English)*:	<input type="text" name="firstNameEn"><br/>
             <br/> 
 			นามสกุล ภาษาอังกฤษ (Last Name in English)*: <input type="text" name="lastNameEn" /><br/> 
 			<br/> 
@@ -118,7 +118,7 @@
 			Please fill in the names of your fellow runners that have been paid for together below:</br>
 			<textarea rows="4" cols="50" name="coRunner"></textarea><br/>	
 			<br/> 		
-			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
+			<span style="color: cyan">แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: </span><input type="file" name="payInSlip" size="50" /><br/>
 			<input type="submit" value="สมัคร/APPLY" />
 			<br/>
 		</form>
