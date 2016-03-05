@@ -108,7 +108,7 @@
 			<br/>
 			<br/> 
 			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br/>
-				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก อาคารคิวเฮ้าส์ ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q-House Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br/>
+				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่อาคารคิวเฮ้าส์ ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q-House Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br/>
 				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini Park on April 9, 2016, 15.30 hrs)</input><br/>
 			<br/> 
 			<br/> 
