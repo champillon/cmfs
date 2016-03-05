@@ -59,11 +59,11 @@ public class InputValidation {
 	}
         
         public static boolean validateFirstNameEn(String firstNameEn){
-            return firstNameEn.length() < firstNameMustNotLongThanThis;
+            return firstNameEn.length() < firstNameMustNotLongThanThis && firstNameEn.length() >0;
         }
         
         public static boolean validateLastNameEn(String lastNameEn){
-            return lastNameEn.length() < lastNameMustNotLongThanThis;
+            return lastNameEn.length() < lastNameMustNotLongThanThis && lastNameEn.length() > 0;
         }
         
         public static boolean validateFirstNameEnFormat(String firstNameEn){
