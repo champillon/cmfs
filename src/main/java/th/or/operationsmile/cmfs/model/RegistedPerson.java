@@ -20,6 +20,15 @@ public class RegistedPerson {
 	private String payInSlipPath;
 	private boolean paid = false;
 	private String runnerId;
+	private String coRunner;
+
+	public String getCoRunner() {
+		return coRunner;
+	}
+
+	public void setCoRunner(String coRunner) {
+		this.coRunner = coRunner;
+	}
 
 	public int getRunningId() {
 		return runningId;

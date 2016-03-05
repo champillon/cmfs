@@ -16,8 +16,8 @@ public class DataAccess {
 
 	private Connection databaseConnection = null;
 	private static final String insertSQL = "INSERT INTO registedPerson ("
-			+ "title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?);";
+			+ "title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid,coRunner) "
+			+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
 	private static final String updateSQLForConfirmedPayment = "UPDATE registedPerson " 
 			+ "SET paid = TRUE, runnerId = ? "
@@ -53,6 +53,7 @@ public class DataAccess {
 		preparedStatement.setString(10, registedPerson.gettShirtPickUpPoint());
 		preparedStatement.setString(11, registedPerson.getPayInSlipPath());
 		preparedStatement.setBoolean(12, registedPerson.isPaid());
+		preparedStatement.setString(13, registedPerson.getCoRunner());
 		
 
 		preparedStatement.executeUpdate();
@@ -86,6 +87,7 @@ public class DataAccess {
 				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 				registedPerson.setPaid(queryResult.getBoolean("paid"));
 				registedPerson.setRunnerId(queryResult.getString("runnerId"));
+				registedPerson.setCoRunner(queryResult.getString("coRunner"));
 
 				results.add(registedPerson);
 
@@ -126,6 +128,7 @@ public class DataAccess {
 			result.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 			result.setPaid(queryResult.getBoolean("paid"));
 			result.setRunnerId(queryResult.getString("runnerId"));
+			result.setCoRunner(queryResult.getString("coRunner"));
 
 		} catch (InvalidDataException e) {
 			e.printStackTrace();
@@ -162,6 +165,7 @@ public class DataAccess {
 				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 				registedPerson.setPaid(queryResult.getBoolean("paid"));
 				registedPerson.setRunnerId(queryResult.getString("runnerId"));
+				registedPerson.setCoRunner(queryResult.getString("coRunner"));
 				
 				results.add(registedPerson);
 

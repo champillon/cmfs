@@ -116,6 +116,7 @@ public class RegistServlet extends HttpServlet {
 		result.settShirtSize(requestValueMap.get("tShirtSize"));
 		result.settShirtPickUpPoint(requestValueMap.get("tShirtPickUpPoint"));
 		result.setPayInSlipPath(requestValueMap.get("payInSlipPath"));
+		result.setCoRunner(requestValueMap.get("coRunner"));
 		
 		if(eMail.equals(confirmedEmail)){
 			result.setEmail(eMail);

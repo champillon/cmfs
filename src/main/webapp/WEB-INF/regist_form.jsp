@@ -13,7 +13,7 @@
 		<u>ขั้นตอนการสมัคร</u></br> 
 		1.ค่าสมัครท่านละ 800 บาท รวมเสื้อยืด สายรัดข้อมือ พบกับกิจกรรมเกมส์หลากหลาย อาหาร และเครื่องดื่มฟรีตลอดงาน </br> 
 		2.กรุณาโอนเงินเข้าบัญชี ชื่อมูลนิธิสร้างรอยยิ้ม ธนาคารไทยพาณิชย์ สาขาเพลินจิต เลขที่บัญชี 059-285581-4 พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br> 
-		3.กรอกแบบฟอร์มการสมัครให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
+		3.กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
 		4.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และเคล็ดลับเพื่อความสนุก </br>
 		5.หากมีคำถาม กรุณาติดต่อ 02 014 4530-1หรืออีเมล thailand@operationsmile.org<br/>
 	</div>
@@ -22,7 +22,7 @@
 		<u>How to enter #CMFS16</u></br> 
 		1.Entry fee is 800 Baht per person, which includes the run, official t-shirt, wristband, sideshow games, food and drink (all proceeds to Operation Smile Thailand) </br> 
 		2.Please transfer your fee (number of people X THB 800) to “Operation Smile Foundation”, Siam Commercial Bank, Ploenchit Branch, 059-285581-4 </br> 
-		3.Please fill out the online application form and upload a copy of your transfer slip before confirming your application. </br>
+		3.Please fill out the online application form individually and upload a copy of your transfer slip before confirming your application. </br>
 		4.A confirmation email with your running number(s) and our tips for the event will be sent to your email address. </br>
 		5.Should you have any questions, please contact 02 014 4530-1 or email to thailand@operationsmile.org<br/>
 	</div>
@@ -103,10 +103,11 @@
 				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q House Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br/>
 				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini Park on April 9, 2016, 15.30 hrs)</input><br/>
 			<br/> 
-			รวม 1 ท่าน ค่าสมัคร 800 บาท<br/>
-			Total: 1 person, Application Fee 800 baht. </br>
+			กรุณาแจ้งชื่อผู้ร่วมวิ่งที่ได้โอนเงินมาพร้อมกัน ในกรอบด้านล่าง<br/>
+			<textarea rows="4" cols="50" name="coRunner"></textarea><br/>			
 			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
 			<input type="submit" value="APPLY" />
+			<br/>
 		</form>
 	</div>
 </body>
