@@ -89,7 +89,7 @@
 			<br/> 
 			เบอร์โทรศัพท์มือถือ (Mobile Phone Number)*: <input type="tel" name="mobile" maxlenght="10" /><br/>
 			<b>ตัวอย่าง Example: 0812345678 </b><br/>
-			อีเมล์ (EMail)*: <input type="email"	name="email" /><br/>
+			อีเมล์ (Email)*: <input type="email"	name="email" /><br/>
 			<b>ตัวอย่าง Example: thailand@operationsmile.org </b><br/>
 			ไซส์เสื้อ (T-Shirt Size)*:<br/> 
 				<input type="radio" name="tShirtSize" value="s">S-36" </input>
@@ -99,13 +99,13 @@
 			<br/>
 			
 			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br/>
-				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (QHouse Lumpini)</input><br/>
-				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น. (at Event place)</input><br/>
+				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q House Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br/>
+				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini Park on April 9, 2016, 15.30 hrs)</input><br/>
 			<br/> 
 			รวม 1 ท่าน ค่าสมัคร 800 บาท<br/>
 			Total: 1 person, Application Fee 800 baht. </br>
 			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
-			<input type="submit" value="apply" />
+			<input type="submit" value="APPLY" />
 		</form>
 	</div>
 </body>
