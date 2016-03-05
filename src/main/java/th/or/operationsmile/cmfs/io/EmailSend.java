@@ -148,7 +148,7 @@ public class EmailSend {
 		emailBody  = emailBody+"\n";
 		
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"แผนที่ (Maps) --> http://newsletter.operationsmile.or.th/map.jpg";
+		emailBody  = emailBody+"แผนที่ (Map) --> http://newsletter.operationsmile.or.th/map.jpg";
 		emailBody  = emailBody+"\n";
 		
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");

@@ -117,7 +117,7 @@
 			<textarea rows="4" cols="50" name="coRunner"></textarea><br/>	
 			<br/> 		
 			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
-			<input type="submit" value="APPLY" />
+			<input type="submit" value="สมัคร/APPLY" />
 			<br/>
 		</form>
 	</div>
