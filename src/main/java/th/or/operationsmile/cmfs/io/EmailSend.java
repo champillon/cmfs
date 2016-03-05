@@ -126,7 +126,7 @@ public class EmailSend {
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"17.15 hrs.\t\tWarm up";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.30 hrs.\t\t";
+		emailBody  = emailBody+"17.30 hrs.\t\tRun starts";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"19.00 hrs.\t\tPrize & Colour Blow";
 		emailBody  = emailBody+"\n";
