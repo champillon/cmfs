@@ -126,7 +126,7 @@ public class EmailSend {
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"17.15 hrs.\t\tWarm up";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.30 hrs.\t\tเริ่มวิ่ง";
+		emailBody  = emailBody+"17.30 hrs.\t\t";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"19.00 hrs.\t\tPrize & Colour Blow";
 		emailBody  = emailBody+"\n";
@@ -142,6 +142,10 @@ public class EmailSend {
 		emailBody  = emailBody+"4.Due to limited parking we suggest you take public transport or taxis to and from the event.";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"5.Please help us keep Lumpini Park as clean as we can for our fellow citizens. Use the bins!";
+		emailBody  = emailBody+"\n";
+		
+		emailBody  = emailBody+"\n";
+		emailBody  = emailBody+"แผนที่ (Maps) --> http://newsletter.operationsmile.or.th/map.jpg";
 		emailBody  = emailBody+"\n";
 		
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");
