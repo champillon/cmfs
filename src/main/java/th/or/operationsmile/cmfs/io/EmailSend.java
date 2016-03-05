@@ -42,9 +42,10 @@ public class EmailSend {
 		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
 		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> รอตรวจสอบข้อมูลการโอน  Colour Miles for Smiles: Application Status -> Application Status Verification");
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
+		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ "
 				+ "ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ"
-				+ "\n"
+				+ "\n\n"
 				+ "Thank you for applying to enter Colour Miles for Smiles 2016: Neon Edition. "
 				+ "Please allow us two working days to review your application and email your confirmation and running number.";
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");
