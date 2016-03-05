@@ -34,10 +34,10 @@
 				<input type="radio" name="title" value="mrs"> นาง/MRS 
 				<input type="radio" name="title" value="ms"> นางสาว/Miss 
 			<br/> 
-			ชื่อ (First Name in Thai):	<input type="text" name="firstName"><br/>
-			นามสกุล (Last Name in Thai): <input type="text" name="lastName" /><br/> 
+			ชื่อ ภาษาไทย:	<input type="text" name="firstName"><br/>
+			นามสกุล ภาษาไทย: <input type="text" name="lastName" /><br/> 
             ชื่อ ภาษาอังกฤษ (First Name in English)*:	<input type="text" name="firstNameEn"><br/>
-			นามสกุล ภาษาอังกฤษ (Last Name in Egnlish)*: <input type="text" name="lastNameEn" /><br/> 
+			นามสกุล ภาษาอังกฤษ (Last Name in English)*: <input type="text" name="lastNameEn" /><br/> 
 			วันและเดือนเกิด (Date of Birth):
 				<select name="birthDate">
 					<option value="01">1</option>
@@ -87,9 +87,9 @@
 					<option value="12">December</option>
 				</select>
 			<br/> 
-			เบอร์โทรศัพท์มือถือ (Mobile)*: <input type="tel" name="mobile" maxlenght="10" /><br/>
+			เบอร์โทรศัพท์มือถือ (Mobile Phone Number)*: <input type="tel" name="mobile" maxlenght="10" /><br/>
 			<b>ตัวอย่าง Example: 0812345678 </b><br/>
-			อีเมล์ (e-Mail)*: <input type="email"	name="email" /><br/>
+			อีเมล์ (EMail)*: <input type="email"	name="email" /><br/>
 			<b>ตัวอย่าง Example: thailand@operationsmile.org </b><br/>
 			ไซส์เสื้อ (T-Shirt Size)*:<br/> 
 				<input type="radio" name="tShirtSize" value="s">S-36" </input>
