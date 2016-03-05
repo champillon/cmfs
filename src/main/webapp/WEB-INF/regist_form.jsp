@@ -90,7 +90,7 @@
 			เบอร์โทรศัพท์มือถือ (Mobile Phone Number)*: <input type="tel" name="mobile" maxlenght="10" /><br/>
 			<b>ตัวอย่าง Example: 0812345678 </b><br/>
 			อีเมล์ (Email)*: <input type="email"	name="email" /><br/>
-			คอนเฟิร์ม อีเมล์ (Confirm Email)*: <input type="email"	name="confirmEmail" /><br/>
+			ยืนยัน อีเมล์ (Confirm Email)*: <input type="email"	name="confirmEmail" /><br/>
 			<b>ตัวอย่าง Example: thailand@operationsmile.org </b><br/>
 			ไซส์เสื้อ (T-Shirt Size)*:<br/> 
 				<input type="radio" name="tShirtSize" value="s">S-36" </input>
