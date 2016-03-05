@@ -91,6 +91,7 @@
 			<b>ตัวอย่าง Example: 0812345678 </b><br/>
 			อีเมล์ (Email)*: <input type="email"	name="email" /><br/>
 			<b>ตัวอย่าง Example: thailand@operationsmile.org </b><br/>
+			คอนเฟิร์ม อีเมล์ (Confirm Email)*: <input type="email"	name="confirmEmail" /><br/>
 			ไซส์เสื้อ (T-Shirt Size)*:<br/> 
 				<input type="radio" name="tShirtSize" value="s">S-36" </input>
 				<input type="radio" name="tShirtSize" value="m">M-40" </input> 

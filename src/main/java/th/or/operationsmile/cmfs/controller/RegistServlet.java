@@ -103,18 +103,26 @@ public class RegistServlet extends HttpServlet {
 	private RegistedPerson mapRequestParameter(Map<String, String> requestValueMap)
 			throws InvalidDataException, UnsupportedEncodingException {
 		RegistedPerson result = new RegistedPerson();
+		String eMail = requestValueMap.get("email");
+		String confirmedEmail = requestValueMap.get("confirmEmail");
 
 		result.setTitle(requestValueMap.get("title"));
 		result.setFirstName(requestValueMap.get("firstName"));
 		result.setLastName(requestValueMap.get("lastName"));
-                result.setFirstNameEn(requestValueMap.get("firstNameEn"));
+        result.setFirstNameEn(requestValueMap.get("firstNameEn"));
 		result.setLastNameEn(requestValueMap.get("lastNameEn"));
 		result.setBirthDate(requestValueMap.get("birthDate") + "-" + requestValueMap.get("birthMonth"));
 		result.setMobile(requestValueMap.get("mobile"));
-		result.setEmail(requestValueMap.get("email"));
 		result.settShirtSize(requestValueMap.get("tShirtSize"));
 		result.settShirtPickUpPoint(requestValueMap.get("tShirtPickUpPoint"));
 		result.setPayInSlipPath(requestValueMap.get("payInSlipPath"));
+		
+		if(eMail.equals(confirmedEmail)){
+			result.setEmail(eMail);
+		}
+		else{
+			throw new InvalidDataException("email and confirmed email are not the same.");
+		}
 
 		return result;
 	}
