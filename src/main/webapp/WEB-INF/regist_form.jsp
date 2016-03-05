@@ -7,7 +7,7 @@
 
 <body>
 	<div id="title">
-		<h2>Colour Miles for Smiles: Application Form.</h2>
+		<h2>Colour Miles for Smiles: Application Form</h2>
 	</div>
 	<div style="font-size: 12px">
 		<u>ขั้นตอนการสมัคร</u></br> 
@@ -34,10 +34,15 @@
 				<input type="radio" name="title" value="mrs"> นาง/MRS 
 				<input type="radio" name="title" value="ms"> นางสาว/Miss 
 			<br/> 
+			<br/> 
 			ชื่อ ภาษาไทย:	<input type="text" name="firstName"><br/>
+			<br/> 
 			นามสกุล ภาษาไทย: <input type="text" name="lastName" /><br/> 
+			<br/> 
             ชื่อ ภาษาอังกฤษ (First Name in English)*:	<input type="text" name="firstNameEn"><br/>
+            <br/> 
 			นามสกุล ภาษาอังกฤษ (Last Name in English)*: <input type="text" name="lastNameEn" /><br/> 
+			<br/> 
 			วันและเดือนเกิด (Date of Birth):
 				<select name="birthDate">
 					<option value="01">1</option>
@@ -87,24 +92,30 @@
 					<option value="12">December</option>
 				</select>
 			<br/> 
+			<br/> 
 			เบอร์โทรศัพท์มือถือ (Mobile Phone Number)*: <input type="tel" name="mobile" maxlenght="10" /><br/>
 			<b>ตัวอย่าง Example: 0812345678 </b><br/>
+			<br/> 
 			อีเมล์ (Email)*: <input type="email"	name="email" /><br/>
 			ยืนยัน อีเมล์ (Confirm Email)*: <input type="email"	name="confirmEmail" /><br/>
 			<b>ตัวอย่าง Example: thailand@operationsmile.org </b><br/>
+			<br/> 
 			ไซส์เสื้อ (T-Shirt Size)*:<br/> 
 				<input type="radio" name="tShirtSize" value="s">S-36" </input>
 				<input type="radio" name="tShirtSize" value="m">M-40" </input> 
 				<input type="radio" name="tShirtSize" value="l">L-44" </input>
 				<input type="radio" name="tShirtSize" value="xl">XL-48" </input> 
 			<br/>
-			
+			<br/> 
 			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br/>
-				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q House Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br/>
+				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก อาคารคิวเฮ้าส์ ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q-House Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br/>
 				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini Park on April 9, 2016, 15.30 hrs)</input><br/>
 			<br/> 
-			กรุณาแจ้งชื่อผู้ร่วมวิ่งที่ได้โอนเงินมาพร้อมกัน ในกรอบด้านล่าง<br/>
-			<textarea rows="4" cols="50" name="coRunner"></textarea><br/>			
+			<br/> 
+			กรุณาแจ้งชื่อผู้ร่วมวิ่ง และได้โอนเงินมาพร้อมกันเป็นภาษาอังกฤษในกรอบด้านล่าง<br/>
+			Please fill in the names of your fellow runners that have been paid for together below:</br>
+			<textarea rows="4" cols="50" name="coRunner"></textarea><br/>	
+			<br/> 		
 			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
 			<input type="submit" value="APPLY" />
 			<br/>
