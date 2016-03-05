@@ -7,33 +7,38 @@
 
 <body>
 	<div id="title">
-		<h2>Colour Miles for Smiles: Registration Form.</h2>
+		<h2>Colour Miles for Smiles: Application Form.</h2>
 	</div>
-	<div>
-		ขั้นตอนการสมัคร </br> 1. ค่าวิ่งท่านละ 800 บาท เด็กอายุต่ำกว่า 5
-		ปีสามารถเข้าร่วมงานได้โดยไม่เสียค่าใช้จ่าย </br> 2. กรุณาโอนเงินเข้าบัญชี
-		มูลนิธิสร้างรอยยิ้ม ธนาคาร... เลขที่บัญชี xxx-x-xxxxx-x
-		พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br> 3.
-		กรอกแบบฟอร์มการสมัครให้ครบถ้วน
-		พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
-		4.ท่านสามารถเลือกมารับเสื้อวิ่ง และสายรัดข้อมือได้ 2 ที่ คือ 1.
-		จุดรับของที่ห้างเอ็มควอเทียร์วันที่ 26 – 27 มีนาคม 2559 หรือ 2.
-		รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 </br>
-		5.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และข้อควรทราบต่างๆ
+	<div style="font-size: 12px">
+		<u>ขั้นตอนการสมัคร</u></br> 
+		1.ค่าสมัครท่านละ 800 บาท รวมเสื้อยืด สายรัดข้อมือ พบกับกิจกรรมเกมส์หลากหลาย อาหาร และเครื่องดื่มฟรีตลอดงาน </br> 
+		2.กรุณาโอนเงินเข้าบัญชี ชื่อมูลนิธิสร้างรอยยิ้ม ธนาคารไทยพาณิชย์ สาขาเพลินจิต เลขที่บัญชี 059-285581-4 พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br> 
+		3.กรอกแบบฟอร์มการสมัครให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
+		4.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และเคล็ดลับเพื่อความสนุก </br>
+		5.หากมีคำถาม กรุณาติดต่อ 02 014 4530-1หรืออีเมล thailand@operationsmile.org<br/>
+	</div>
+	<br/>
+	<div style="font-size: 12px">
+		<u>How to enter #CMFS16</u></br> 
+		1.Entry fee is 800 Baht per person, which includes the run, official t-shirt, wristband, sideshow games, food and drink (all proceeds to Operation Smile Thailand) </br> 
+		2.Please transfer your fee (number of people X THB 800) to “Operation Smile Foundation”, Siam Commercial Bank, Ploenchit Branch, 059-285581-4 </br> 
+		3.Please fill out the online application form and upload a copy of your transfer slip before confirming your application. </br>
+		4.A confirmation email with your running number(s) and our tips for the event will be sent to your email address. </br>
+		5.Should you have any questions, please contact 02 014 4530-1 or email to thailand@operationsmile.org<br/>
 	</div>
 	<br/>
 	<div id="content">
 		<form id="regist_form" action="./Regist" method="POST"  enctype="multipart/form-data">
 			คำนำหน้า (Title)*: <br/>
-				<input type="radio" name="title" value="mr"> Mr/นาย 
-				<input type="radio" name="title" value="mrs"> Mrs/นาง 
-				<input type="radio" name="title" value="ms"> Ms/นางสาว 
+				<input type="radio" name="title" value="mr"> นาย/MR 
+				<input type="radio" name="title" value="mrs"> นาง/MRS 
+				<input type="radio" name="title" value="ms"> นางสาว/Miss 
 			<br/> 
-			ชื่อ (First Name in Thai)*:	<input type="text" name="firstName"><br/>
-			นามสกุล (Last Name In Thai)*: <input type="text" name="lastName" /><br/> 
-            ชื่อ ภาษาอังกฤษ (First Name English)*:	<input type="text" name="firstNameEn"><br/>
-			นามสกุล ภาษาอังกฤษ (Last Name Egnlish)*: <input type="text" name="lastNameEn" /><br/> 
-			่วันและเดือนเกิด (Date of Birth):
+			ชื่อ (First Name in Thai):	<input type="text" name="firstName"><br/>
+			นามสกุล (Last Name in Thai): <input type="text" name="lastName" /><br/> 
+            ชื่อ ภาษาอังกฤษ (First Name in English)*:	<input type="text" name="firstNameEn"><br/>
+			นามสกุล ภาษาอังกฤษ (Last Name in Egnlish)*: <input type="text" name="lastNameEn" /><br/> 
+			วันและเดือนเกิด (Date of Birth):
 				<select name="birthDate">
 					<option value="01">1</option>
 					<option value="02">2</option>
@@ -94,13 +99,13 @@
 			<br/>
 			
 			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br/>
-				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น.</input><br/>
-				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น.</input><br/>
+				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (QHouse Lumpini)</input><br/>
+				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น. (at Event place)</input><br/>
 			<br/> 
-			รวม 1 ท่านค่าลงทะเบียน 800 บาท<br/>
-			Total: 1 person, 800 baht. </br>
+			รวม 1 ท่าน ค่าสมัคร 800 บาท<br/>
+			Total: 1 person, Application Fee 800 baht. </br>
 			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
-			<input type="submit" value="register" />
+			<input type="submit" value="apply" />
 		</form>
 	</div>
 </body>
