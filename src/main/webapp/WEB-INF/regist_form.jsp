@@ -21,18 +21,19 @@
 		รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 </br>
 		5.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และข้อควรทราบต่างๆ
 	</div>
+	<br/>
 	<div id="content">
 		<form id="regist_form" action="./Regist" method="POST"  enctype="multipart/form-data">
-			Title*: 
-				<input type="radio" name="title" value="mr"> Mr 
-				<input type="radio" name="title" value="mrs"> Mrs 
-				<input type="radio" name="title" value="ms"> Ms 
+			คำนำหน้า (Title)*: <br/>
+				<input type="radio" name="title" value="mr"> Mr/นาย 
+				<input type="radio" name="title" value="mrs"> Mrs/นาง 
+				<input type="radio" name="title" value="ms"> Ms/นางสาว 
 			<br/> 
-			First Name*:	<input type="text" name="firstName"><br/>
-			Last Name*: <input type="text" name="lastName" /><br/> 
-                        First Name English*:	<input type="text" name="firstNameEn"><br/>
-			Last Name Egnlish*: <input type="text" name="lastNameEn" /><br/> 
-			Date of Birth:
+			ชื่อ (First Name in Thai)*:	<input type="text" name="firstName"><br/>
+			นามสกุล (Last Name In Thai)*: <input type="text" name="lastName" /><br/> 
+            ชื่อ ภาษาอังกฤษ (First Name English)*:	<input type="text" name="firstNameEn"><br/>
+			นามสกุล ภาษาอังกฤษ (Last Name Egnlish)*: <input type="text" name="lastNameEn" /><br/> 
+			่วันและเดือนเกิด (Date of Birth):
 				<select name="birthDate">
 					<option value="01">1</option>
 					<option value="02">2</option>
@@ -81,21 +82,24 @@
 					<option value="12">December</option>
 				</select>
 			<br/> 
-			Mobile*: <input type="tel" name="mobile" /><br/>
-			e-Mail*: <input type="email"	name="email" /><br/> 
-			T-Shirt Size*: 
+			เบอร์โทรศัพท์มือถือ (Mobile)*: <input type="tel" name="mobile" maxlenght="10" /><br/>
+			<b>ตัวอย่าง Example: 0812345678 </b><br/>
+			อีเมล์ (e-Mail)*: <input type="email"	name="email" /><br/>
+			<b>ตัวอย่าง Example: thailand@operationsmile.org </b><br/>
+			ไซส์เสื้อ (T-Shirt Size)*:<br/> 
 				<input type="radio" name="tShirtSize" value="s">S-36" </input>
 				<input type="radio" name="tShirtSize" value="m">M-40" </input> 
 				<input type="radio" name="tShirtSize" value="l">L-44" </input>
 				<input type="radio" name="tShirtSize" value="xl">XL-48" </input> 
 			<br/>
 			
-			T-Shirt Pick-up Point*: 
-				<input	type="radio" name="tShirtPickUpPoint" value="emQuatier">EmQuatier</input>
-				<input type="radio" name="tShirtPickUpPoint" value="event">Event</input>
+			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br/>
+				<input	type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่ตึก Q-House ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น.</input><br/>
+				<input type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี วันที่ 9 เมษายน 2559 เวลา 15.30 น.</input><br/>
 			<br/> 
-			Total: 1 person, 800 baht. </br> 
-			Pay-in Slip*: <input type="file" name="payInSlip" size="50" /><br/>
+			รวม 1 ท่านค่าลงทะเบียน 800 บาท<br/>
+			Total: 1 person, 800 baht. </br>
+			แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: <input type="file" name="payInSlip" size="50" /><br/>
 			<input type="submit" value="register" />
 		</form>
 	</div>
