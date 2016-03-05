@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Language" content="th">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
+<title>>Colour Miles for Smiles: Query Registed People</title>
 </head>
 <body>
 	<table border="1">
