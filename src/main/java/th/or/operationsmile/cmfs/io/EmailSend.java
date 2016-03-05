@@ -39,13 +39,13 @@ public class EmailSend {
 //		getMailSession = Session.getDefaultInstance(mailServerProperties, null);
 		getMailSession = Session.getInstance(mailServerProperties, new javax.mail.Authenticator() {
 		    protected PasswordAuthentication getPasswordAuthentication() {
-		        return new PasswordAuthentication("passapong.t@gmail.com", "mysterior");
+		        return new PasswordAuthentication("operationsmile.th@gmail.com", "mysterior");
 		    }
 		});
 		generateMailMessage = new MimeMessage(getMailSession);
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
-//		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("test2@crunchify.com"));
-		generateMailMessage.setFrom(new InternetAddress("passapong.t@gmail.com"));
+//		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("passapong.opsmile@gmail.com"));
+		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
 		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> รอตรวจสอบข้อมูลการโอน");
 		String emailBody  = "ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ";
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");
