@@ -10,6 +10,8 @@
 <title>Colour Miles for Smiles: Query Registed People</title>
 </head>
 <body>
+	<h2><a href="http://newsletter.operationsmile.or.th/summary/" target="_blank">Download CSV</a></h2><br/>
+	<br/>
 	<table border="1">
 		<tr>
 			<th>#</th>
