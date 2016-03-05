@@ -86,7 +86,7 @@ public class RegistServlet extends HttpServlet {
 		} else {
 			response.setContentType("text/plain; charset=utf-8");
 			response.setCharacterEncoding("UTF-8");
-			response.getWriter().append("เกิดข้อผิดพลาด กรูณาลองทำรายการใหม่อีกครั้ง");
+			response.getWriter().append("เกิดข้อผิดพลาด กรุณาลองทำรายการใหม่อีกครั้ง");
 		}
 
 	}
