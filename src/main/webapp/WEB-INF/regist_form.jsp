@@ -17,7 +17,7 @@
 		2.กรุณาโอนเงินเข้าบัญชี ชื่อมูลนิธิสร้างรอยยิ้ม ธนาคารไทยพาณิชย์ สาขาเพลินจิต เลขที่บัญชี <b style="color:pink">059-285581-4</b> พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br> 
 		3.กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
 		4.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และเคล็ดลับเพื่อความสนุก </br>
-		5.หากมีคำถาม กรุณาติดต่อ <b style="color:lime">02 014 4530-1</b>หรืออีเมล <b style="color:red"><a href="mailto:thailand@operationsmile.org">thailand@operationsmile.org</a></b><br/>
+		5.หากมีคำถาม กรุณาติดต่อ <b style="color:lime">02 014 4530-1</b>หรืออีเมล <b style="color:red">thailand@operationsmile.org</b><br/>
 	</div>
 	<br/>
 	<div style="font-size: 14px;width=600px" >
@@ -26,7 +26,7 @@
 		2.Please transfer your fee (number of people X THB 800) to “Operation Smile Foundation”, Siam Commercial Bank, Ploenchit Branch, <b style="color:cyan">059-285581-4</b> </br> 
 		3.Please fill out the online application form individually and upload a copy of your transfer slip before confirming your application. </br>
 		4.A confirmation email with your running number(s) and our tips for the event will be sent to your email address. </br>
-		5.Should you have any questions, please contact <b style="color:orange">02 014 4530-1</b> or email to <b style="color:yellow"><a href="mailto:thailand@operationsmile.org">thailand@operationsmile.org</a></b><br/>
+		5.Should you have any questions, please contact <b style="color:orange">02 014 4530-1</b> or email to <b style="color:yellow">thailand@operationsmile.org</b><br/>
 	</div>
 	<br/>
 	<div id="content">
@@ -39,9 +39,9 @@
 			<br/> 
 			ชื่อ ภาษาไทย:	<input type="text" name="firstName"><br/>
 			<br/> 
-			<span style="color: orange;">นามสกุล ภาษาไทย: </span><input type="text" name="lastName" /><br/> 
+			นามสกุล ภาษาไทย: <input type="text" name="lastName" /><br/> 
 			<br/> 
-            ชื่อ ภาษาอังกฤษ (First Name in English)*:	<input type="text" name="firstNameEn"><br/>
+            <span style="color: orange;">ชื่อ ภาษาอังกฤษ (First Name in English)*</span>:	<input type="text" name="firstNameEn"><br/>
             <br/> 
 			นามสกุล ภาษาอังกฤษ (Last Name in English)*: <input type="text" name="lastNameEn" /><br/> 
 			<br/> 
