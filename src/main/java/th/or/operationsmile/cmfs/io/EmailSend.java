@@ -40,7 +40,7 @@ public class EmailSend {
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
 		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("narumon.m@operationsmile.org"));
 		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
-		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> รอตรวจสอบข้อมูลการโอน");
+		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> รอตรวจสอบข้อมูลการโอน  Colour Miles for Smiles: Application Status -> Application Status Verification");
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
 		emailBody  = emailBody+"ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ "
 				+ "ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ"
@@ -71,10 +71,12 @@ public class EmailSend {
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
 		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("narumon.m@operationsmile.org"));
 		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
-		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> แจ้งหมายเลขผู้วิ่งของท่าน");
+		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> แจ้งหมายเลขผู้วิ่งของท่าน Colour Miles for Smiles: Application Status -> Runner Number Notification");
 		
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
+		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"ทางมูลนิธิสร้างรอยยิ้มได้ดำเนินการตรวจสอบเอกสารเรียบร้อยแล้ว หมายเลขผู้วิ่งของท่านคือ "+registedPerson.getRunnerId();
+		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"สำหรับท่านที่เลือกมาลงทะเบียน พร้อมรับเสื้อวิ่ง และสายรัดข้อมือที่อาคารคิวเฮ้าส์ ลุมพินี (MRT สถานีลุมพินี ทางออก 2) ให้มารับได้ที่จุดรับของ บริเวณทางเข้าอาคาร หน้าร้านหนังสือนายอินทร์ เวลา 10.00 – 17.00 น. วันเสาร์ที่ 26 และวันอาทิตย์ที่ 27 มีนาคม 2559";
 		emailBody  = emailBody+"\n";
@@ -107,7 +109,9 @@ public class EmailSend {
 		emailBody  = emailBody+"5.กรุณาช่วยกันรักษาความสะอาดของสวนลุมพินี";
 		emailBody  = emailBody+"\n";
 		
-		emailBody  = emailBody+"Congratulations: Your Colour Miles for Smiles 2016: Neon Edition entry is confirmed! Your running number is "+registedPerson.getRunnerId();
+		emailBody  = emailBody+"\n";
+		emailBody  = emailBody+"Congratulations: Your Colour Miles for Smiles 2016: Neon Edition entry is confirmed! Your running number is "+registedPerson.getRunnerId()+".";
+		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"To collect your running pack at Q House Lumpini (Lumpini MRT Station, Exit 2), please find us at the entrance to the building (in front of Naiin bookstore) between 10.00 hrs. and 17.00 hrs. on March 26 & 27, 2016.";
 		emailBody  = emailBody+"\n";
@@ -116,15 +120,15 @@ public class EmailSend {
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"Agenda";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"15.30 น.\t\tRegistration";
+		emailBody  = emailBody+"15.30 hrs.\t\tRegistration";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.00 น.\t\tOpening & Donation Photo Op";
+		emailBody  = emailBody+"17.00 hrs.\t\tOpening & Donation Photo Op";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.15 น.\t\tWarm up";
+		emailBody  = emailBody+"17.15 hrs.\t\tWarm up";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.30 น.\t\tเริ่มวิ่ง";
+		emailBody  = emailBody+"17.30 hrs.\t\tเริ่มวิ่ง";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"19.00 น.\t\tPrize & Colour Blow";
+		emailBody  = emailBody+"19.00 hrs.\t\tPrize & Colour Blow";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"Our tips for a fun event";
