@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-<title>Colour Miles for Smiles: Registration Form.</title>
+<title>Colour Miles for Smiles: Application Form.</title>
 <meta http-equiv="Content-Language" content="th">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>

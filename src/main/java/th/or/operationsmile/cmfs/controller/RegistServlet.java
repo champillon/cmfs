@@ -50,6 +50,7 @@ public class RegistServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		boolean processCompleted = false;
+		String errorMessage = "";
 		Map<String, String> requestValueMap = null;
 
 		try {
@@ -61,32 +62,40 @@ public class RegistServlet extends HttpServlet {
 
 		} catch (InvalidDataException e) {
 			e.printStackTrace();
+			errorMessage = e.getMessage();
 
 		} catch (AddressException e) {
 			e.printStackTrace();
+			errorMessage = e.getMessage();
 
 		} catch (MessagingException e) {
 			e.printStackTrace();
+			errorMessage = e.getMessage();
 
 		} catch (NamingException e) {
 			e.printStackTrace();
+			errorMessage = e.getMessage();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			errorMessage = e.getMessage();
 
 		} catch (ErrorFieldException e) {
 			e.printStackTrace();
+			errorMessage = e.getMessage();
 		}
 
 		if (processCompleted) {
 			response.setContentType("text/plain; charset=utf-8");
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().append(
-					"ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ");
+					"ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ"
+					+ "\n"
+					+ "Thank you for applying to enter Colour Miles for Smiles 2016: Neon Edition. Please allow us two working days to review your application and email your confirmation and running number.");
 		} else {
 			response.setContentType("text/plain; charset=utf-8");
 			response.setCharacterEncoding("UTF-8");
-			response.getWriter().append("เกิดข้อผิดพลาด กรุณาลองทำรายการใหม่อีกครั้ง");
+			response.getWriter().append("[ERROR] เกิดข้อผิดพลาด กรุณาลองทำรายการใหม่อีกครั้ง รายละเอียด Error:"+errorMessage);
 		}
 
 	}
