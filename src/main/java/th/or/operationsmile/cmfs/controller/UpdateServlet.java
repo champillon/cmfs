@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -17,6 +19,7 @@ import javax.sql.DataSource;
 import th.or.operationsmile.cmfs.exception.ErrorFieldException;
 import th.or.operationsmile.cmfs.exception.InvalidDataException;
 import th.or.operationsmile.cmfs.io.DataAccess;
+import th.or.operationsmile.cmfs.io.EmailSend;
 import th.or.operationsmile.cmfs.model.RegistedPerson;
 
 /**
@@ -48,7 +51,8 @@ public class UpdateServlet extends HttpServlet {
 		boolean processCompleted = false;
 		
 		try {
-			confirmPaySlip(runningId);
+			RegistedPerson registedPersonThatConfirmPaySlip = confirmPaySlip(runningId);
+			EmailSend.sendConfirmationEmail(registedPersonThatConfirmPaySlip.getEmail(), registedPersonThatConfirmPaySlip);
 			
 			processCompleted = true;
 		} catch (NamingException e) {
@@ -59,13 +63,17 @@ public class UpdateServlet extends HttpServlet {
 			e.printStackTrace();
 		} catch (InvalidDataException e) {
 			e.printStackTrace();
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
 		}
 		
 		response.sendRedirect("./Query");
 		
 	}
 	
-	private void confirmPaySlip(int runningId)
+	private RegistedPerson confirmPaySlip(int runningId)
 			throws NamingException, SQLException, ErrorFieldException, InvalidDataException {
 		Context initialContext = new InitialContext();
 		Context environmentContext = (Context) initialContext.lookup("java:comp/env");
@@ -77,6 +85,8 @@ public class UpdateServlet extends HttpServlet {
 		dataAccess.confirmedPaySlipAndGenerateRunningKey(registedPersonThatConfirmPaySlip);
 				
 		databaseConnection.close();
+		
+		return registedPersonThatConfirmPaySlip;
 
 	}
 

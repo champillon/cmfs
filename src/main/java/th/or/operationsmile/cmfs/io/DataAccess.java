@@ -26,7 +26,7 @@ public class DataAccess {
 
 	private static final String selectSQLwithFirstName = "SELECT * FROM registedPerson WHERE firstName = ? ;";
 	private static final String selectSQLwithRunningId = "SELECT * FROM registedPerson WHERE runningId = ? ;";
-	private static final String selectSQL = "SELECT * FROM registedPerson;";
+	private static final String selectSQLThatNotConfirm = "SELECT * FROM registedPerson WHERE paid=FALSE;";
 
 	public DataAccess(Connection databaseConnection) {
 		this.databaseConnection = databaseConnection;
@@ -137,8 +137,8 @@ public class DataAccess {
 		return result;
 	}
 
-	public List<RegistedPerson> queryRegistedPerson() throws SQLException {
-		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQL);
+	public List<RegistedPerson> queryRegistedPersonThatNotConfirm() throws SQLException {
+		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectSQLThatNotConfirm);
 		ResultSet queryResult = queryResultStatement.executeQuery();
 
 		List<RegistedPerson> results = new ArrayList<RegistedPerson>();

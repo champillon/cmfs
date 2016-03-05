@@ -56,7 +56,7 @@ public class RegistServlet extends HttpServlet {
 			requestValueMap = handleRequestWithUploadedFile(request, response);
 			RegistedPerson registedPerson = mapRequestParameter(requestValueMap);
 			saveToDatabase(registedPerson);
-			EmailSend.generateAndSendEmail(registedPerson.getEmail(), registedPerson);
+			EmailSend.sendRegistrationEmail(registedPerson.getEmail(), registedPerson);
 			processCompleted = true;
 
 		} catch (InvalidDataException e) {

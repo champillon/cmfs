@@ -63,7 +63,7 @@ public class QueryServlet extends HttpServlet {
 
 		Connection databaseConnection = dataSource.getConnection();
 		DataAccess dataAccess = new DataAccess(databaseConnection);
-		results = dataAccess.queryRegistedPerson();
+		results = dataAccess.queryRegistedPersonThatNotConfirm();
 
 		databaseConnection.close();
 		
