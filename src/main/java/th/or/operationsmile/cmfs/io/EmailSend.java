@@ -114,7 +114,7 @@ public class EmailSend {
 		emailBody  = emailBody+"Congratulations: Your Colour Miles for Smiles 2016: Neon Edition entry is confirmed! Your running number is "+registedPerson.getRunnerId()+".";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"To collect your running pack at Q House Lumpini (Lumpini MRT Station, Exit 2), please find us at the entrance to the building (in front of Naiin bookstore) between 10.00 hrs. and 17.00 hrs. on March 26 & 27, 2016.";
+		emailBody  = emailBody+"To collect your running pack at Q-House Lumpini (Lumpini MRT Station, Exit 2), please find us at the entrance to the building (in front of Naiin bookstore) between 10.00 hrs. and 17.00 hrs. on March 26 & 27, 2016.";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"To collect your running pack at the event visit the event registration at the Entertainment Building, Lumpini Park from 15.30 hrs. See you at Lumpini Park on April 9, 2016.";
 		emailBody  = emailBody+"\n";
