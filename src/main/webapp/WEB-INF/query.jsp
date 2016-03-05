@@ -60,6 +60,11 @@
 					</form>	
 				</td>
 			</tr>
+			<tr>
+				<td colSpan="14">
+					ผู้วิ่งร่วม: <c:out value="${registedPerson.coRunner}" />
+				</td>
+			</tr>
 		</c:forEach>
 	</table>
 
