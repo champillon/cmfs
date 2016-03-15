@@ -3,12 +3,29 @@
         <title>Colour Miles for Smiles: Application Form.</title>
         <meta http-equiv="Content-Language" content="th">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script>
+                    var num = 1;
+                    function appendTo() {
+                        $form = $("#master-form").clone();
+                        $("#append-form").append($form);
+                        $form.toggleClass("hide");
+                        $form.children("input[name=title]").prop("name", "title" + num);
+                        $form.children("input[name=tShirtSize]").prop("name", "tShirtSize" + num);
+                        $form.children("input[name=tShirtPickUpPoint]").prop("name", "tShirtPickUpPoint" + num);
+                        num++;
+                    }
+        </script>
+        <style>
+            .hide{
+                display: none;
+            }
+        </style>
     </head>
 
-    <body style="color: 000;" >
-        <!--background="http://newsletter.operationsmile.or.th/background.png"-->
+    <body style="color: white;" background="http://newsletter.operationsmile.or.th/background.png">
         <div id="title">
-            <!--<img src="http://newsletter.operationsmile.or.th/logo.png" width="600px">-->
+            <img src="http://newsletter.operationsmile.or.th/logo.png" width="600px">
             <h1><span style="color:cyan">ใบสมัคร/</span><span style="color: yellow">Application </span><span style="color:lime;">Form</span></h1>
 
         </div>
@@ -31,7 +48,7 @@
         </div>
         <br/>
         <div id="content">
-            <div id="master-form" style="display: none">
+            <div id="master-form" class="hide">
                 <span style="color:cyan">คำนำหน้า (Title)*: </span><br/>
                 <input type="radio" name="title" value="mr"> นาย/MR 
                 <input type="radio" name="title" value="mrs"> นาง/MRS 
@@ -211,19 +228,5 @@
                 <br/>
             </form>
         </div>
-
-
-        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-        <script>
-                    var num = 1;
-                    function appendTo() {
-                        $form = $("#master-form").clone().prop("style", "display:block");
-                        $("#append-form").append($form);
-                        $form.children("input[name=title]").prop("name", "title" + num);
-                        $form.children("input[name=tShirtSize]").prop("name", "tShirtSize" + num);
-                        $form.children("input[name=tShirtPickUpPoint]").prop("name", "tShirtPickUpPoint" + num);
-                        num++;
-                    }
-        </script>
     </body>
 </html>
