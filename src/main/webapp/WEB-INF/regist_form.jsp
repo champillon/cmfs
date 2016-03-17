@@ -220,7 +220,7 @@
                     </div>
                 </div>
 
-                <input type="button" value="เพิ่มชื่อ" onclick="javascript:appendTo()" />
+                <input type="button" value="เพิ่มชื่อ (Add more Runners)" onclick="javascript:appendTo()" />
 
                 <br/> 		
                 <span style="color: cyan">แนบเอกสารยืนยันการโอนเงิน (Pay-in Slip)*: </span><input type="file" name="payInSlip" size="50" /><br/>
