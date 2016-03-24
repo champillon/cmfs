@@ -154,11 +154,8 @@
 				type="radio" name="tShirtSize" value="m">M-40" </input> <input
 				type="radio" name="tShirtSize" value="l">L-44" </input> <input
 				type="radio" name="tShirtSize" value="xl">XL-48" </input> <br /> <br />
-			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br /> <input type="radio"
-				name="tShirtPickUpPoint" value="QHouse">รับที่อาคารคิวเฮ้าส์
-			ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q-House
-			Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br /> <input
-				type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี
+			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br />  <input
+				type="hidden" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี
 			วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini
 			Park on April 9, 2016, 15.30 hrs)</input><br /> <br />
 		</div>
@@ -231,19 +228,16 @@
 					</input> <input type="radio" name="tShirtSize" value="m">M-40" </input> <input
 						type="radio" name="tShirtSize" value="l">L-44" </input> <input
 						type="radio" name="tShirtSize" value="xl">XL-48" </input> <br /> <br />
-					สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br /> <input
-						type="radio" name="tShirtPickUpPoint" value="QHouse">รับที่อาคารคิวเฮ้าส์
-					ลุมพินี วันที่ 26 – 27 มีนาคม 2559 เวลา 10.00 – 17.00 น. (Q-House
-					Lumpini on March 26-27, 2016, 10.00 – 17.00 hrs)</input><br /> <input
-						type="radio" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี
+					สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br />  <input
+						type="hidden" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี
 					วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini
 					Park on April 9, 2016, 15.30 hrs)</input><br /> <br />
 				</div>
 			</div>
 
 			<input type="button" value="เพิ่มชื่อ (Add more Runners)"
-				onclick="javascript:appendTo()" /> <br /> <span style="color: cyan">แนบเอกสารยืนยันการโอนเงิน
-				(Pay-in Slip)*: </span><input type="file" name="payInSlip" size="50" /><br />
+				onclick="javascript:appendTo()" /> <br /> <span style="color: cyan">แนบเอกสารยืนยันการโอนเงินเฉพาะไฟล์ JPEG เท่านั้น
+				(Pay-in Slip JPEG only)*: </span><input type="file" name="payInSlip" size="50" /><br />
 			<input type="submit" value="สมัคร/APPLY" /> <br />
 		</form>
 	</div>
