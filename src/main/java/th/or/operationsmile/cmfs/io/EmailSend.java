@@ -79,10 +79,7 @@ public class EmailSend {
 		emailBody  = emailBody+"ทางมูลนิธิสร้างรอยยิ้มได้ดำเนินการตรวจสอบเอกสารเรียบร้อยแล้ว หมายเลขผู้วิ่งของท่านคือ "+registedPerson.getRunnerId();
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"สำหรับท่านที่เลือกมาลงทะเบียน พร้อมรับเสื้อวิ่ง และสายรัดข้อมือที่อาคารคิวเฮ้าส์ ลุมพินี (MRT สถานีลุมพินี ทางออก 2) ให้มารับได้ที่จุดรับของ บริเวณทางเข้าอาคาร หน้าร้านหนังสือนายอินทร์ เวลา 10.00 – 17.00 น. วันเสาร์ที่ 26 และวันอาทิตย์ที่ 27 มีนาคม 2559";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"ส่วนท่านที่สะดวกมารับหน้างาน ให้มาลงทะเบียนที่อาคารบันเทิง สวนลุมพินี เวลา 15.30 น. เป็นต้นไป พบกันที่สวนลุมพินี วันเสาร์ที่ 9 เมษายน 2559 นี้ ";
+		emailBody  = emailBody+"ท่านสามารถมารับเสื้อวิ่ง และสายรัดข้อมือได้หน้างานที่อาคารบันเทิง สวนลุมพินี เวลา 15.30 น. เป็นต้นไป พบกันที่สวนลุมพินี วันเสาร์ที่ 9 เมษายน 2559 นี้ ";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"กำหนดการ";
@@ -115,10 +112,7 @@ public class EmailSend {
 		emailBody  = emailBody+"Congratulations: Your Colour Miles for Smiles 2016: Neon Edition entry is confirmed! Your running number is "+registedPerson.getRunnerId()+".";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"To collect your running pack at Q-House Lumpini (Lumpini MRT Station, Exit 2), please find us at the entrance to the building (in front of Naiin bookstore) between 10.00 hrs. and 17.00 hrs. on March 26 & 27, 2016.";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"To collect your running pack at the event visit the event registration at the Entertainment Building, Lumpini Park from 15.30 hrs. See you at Lumpini Park on April 9, 2016.";
+		emailBody  = emailBody+"Please come to collect your running pack at the event visit the event registration at the Entertainment Building, Lumpini Park from 15.30 hrs. See you at Lumpini Park on April 9, 2016.";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"Agenda";
