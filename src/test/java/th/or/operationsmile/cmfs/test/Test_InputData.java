@@ -179,40 +179,6 @@ public class Test_InputData {
 	}
 	
 	@Test
-	public void can_input_right_tShirtSize() throws InvalidDataException {
-		String rightInput[] = { "s", "m", "l","xl" };
-		RegistedPerson registedPerson = null;
-
-		registedPerson = new RegistedPerson();
-		registedPerson.settShirtSize(rightInput[0]);
-		assertEquals(rightInput[0], registedPerson.gettShirtSize());
-
-		registedPerson = new RegistedPerson();
-		registedPerson.settShirtSize(rightInput[1]);
-		assertEquals(rightInput[1], registedPerson.gettShirtSize());
-
-		registedPerson = new RegistedPerson();
-		registedPerson.settShirtSize(rightInput[2]);
-		assertEquals(rightInput[2], registedPerson.gettShirtSize());
-		
-		registedPerson = new RegistedPerson();
-		registedPerson.settShirtSize(rightInput[3]);
-		assertEquals(rightInput[3], registedPerson.gettShirtSize());
-
-	}
-	
-	@Test(expected = InvalidDataException.class)
-	public void cannot_input_wrong_tShirtSize() throws InvalidDataException {
-		String wrongInput = "xr";
-		RegistedPerson registedPerson = null;
-
-		registedPerson = new RegistedPerson();
-		registedPerson.settShirtSize(wrongInput);
-		assertEquals(null, registedPerson.gettShirtSize());
-
-	}
-	
-	@Test
 	public void can_input_right_registedPerson()throws ErrorFieldException,InvalidDataException{
 		RegistedPerson rightInput = new RegistedPerson();
 		rightInput.setTitle("mr");
@@ -223,8 +189,6 @@ public class Test_InputData {
 		rightInput.setBirthDate("31-12");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
-		rightInput.settShirtSize("m");
-		rightInput.settShirtPickUpPoint("aa");
 		rightInput.setPayInSlipPath("/path/for/test/");
 		
 		rightInput.validateAllField();
@@ -241,8 +205,6 @@ public class Test_InputData {
 		rightInput.setBirthDate("31-11");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
-		rightInput.settShirtSize("m");
-		rightInput.settShirtPickUpPoint(null);
 		rightInput.setPayInSlipPath("/path/for/test/");
 		
 		rightInput.validateAllField();
@@ -261,11 +223,9 @@ public class Test_InputData {
 		registedPerson.setBirthDate("31-12");
 		registedPerson.setMobile("0123456789");
 		registedPerson.setEmail("test@test.com");
-		registedPerson.settShirtSize("m");
-		registedPerson.settShirtPickUpPoint("aa");
 		registedPerson.setPayInSlipPath("/path/for/test/");
 		
 		assertEquals(registedPerson.toString(),
-				"{mr,TestFirstName,TestLastName,TestFirstNameEn,TestLastNameEn,31-12,0123456789,test@test.com,m,aa,/path/for/test/}");
+				"{mr,TestFirstName,TestLastName,TestFirstNameEn,TestLastNameEn,31-12,0123456789,test@test.com,/path/for/test/}");
 	}
 }
