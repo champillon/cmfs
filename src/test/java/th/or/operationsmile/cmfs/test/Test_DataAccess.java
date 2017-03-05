@@ -25,8 +25,8 @@ public class Test_DataAccess {
 	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/carnival?useUnicode=true&characterEncoding=utf-8";
 	
 	private static final String insertSQL = "INSERT INTO registedPerson "
-			+ "(title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
-			+ "VALUES('mr',?,'TestLastName','TestFirstNameEn','TestLastNameEn','31-12','0123456789','test@test.com','m','aa','/path/for/test/',FALSE);";
+			+ "(title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,payInSlipPath,paid) "
+			+ "VALUES('mr',?,'TestLastName','TestFirstNameEn','TestLastNameEn','31-12','0123456789','test@test.com','/path/for/test/',FALSE);";
 	private static final String selectSQL = "SELECT * FROM registedPerson WHERE email = ? ;";
 	private static final String clearUpSQL = "DELETE FROM registedPerson;";
 	private static final String selectMaxRunnerID = "SELECT max(runnerId) FROM registedPerson;";
@@ -67,8 +67,6 @@ public class Test_DataAccess {
 		rightInput.setBirthDate("31-12");
 		rightInput.setMobile("0123456789");
 		rightInput.setEmail("test@test.com");
-		rightInput.settShirtSize("m");
-		rightInput.settShirtPickUpPoint("aa");
 		rightInput.setPayInSlipPath("/path/for/test/");
 
 		DataAccess dataAccess = new DataAccess(this.databaseConnection);
@@ -87,8 +85,6 @@ public class Test_DataAccess {
 		assertEquals(queryResult.getString("birthDate"), "31-12");
 		assertEquals(queryResult.getString("mobile"), "0123456789");
 		assertEquals(queryResult.getString("email"), "test@test.com");
-		assertEquals(queryResult.getString("tShirtSize"), "m");
-		assertEquals(queryResult.getString("tShirtPickUpPoint"), "aa");
 		assertEquals(queryResult.getString("payInSlipPath"), "/path/for/test/");
 		assertEquals(queryResult.getBoolean("paid"), false);
 		
@@ -129,8 +125,6 @@ public class Test_DataAccess {
 			assertEquals(registedPerson.getLastName(), "TestLastName");
 			assertEquals(registedPerson.getBirthDate(), "31-12");
 			assertEquals(registedPerson.getMobile(), "0123456789");
-			assertEquals(registedPerson.gettShirtSize(), "m");
-			assertEquals(registedPerson.gettShirtPickUpPoint(), "aa");
 			assertEquals(registedPerson.getPayInSlipPath(), "/path/for/test/");
 			assertEquals(registedPerson.isPaid(), false);
 		}		
