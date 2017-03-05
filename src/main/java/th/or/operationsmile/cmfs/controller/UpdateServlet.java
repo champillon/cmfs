@@ -48,10 +48,11 @@ public class UpdateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int runningId = Integer.parseInt(request.getParameter("runningId"));
+		String runnerId = request.getParameter("runnerId");
 		boolean processCompleted = false;
 		
 		try {
-			RegistedPerson registedPersonThatConfirmPaySlip = confirmPaySlip(runningId);
+			RegistedPerson registedPersonThatConfirmPaySlip = confirmPaySlip(runningId, runnerId);
 			EmailSend.sendConfirmationEmail(registedPersonThatConfirmPaySlip.getEmail(), registedPersonThatConfirmPaySlip);
 			
 			processCompleted = true;
@@ -73,7 +74,7 @@ public class UpdateServlet extends HttpServlet {
 		
 	}
 	
-	private RegistedPerson confirmPaySlip(int runningId)
+	private RegistedPerson confirmPaySlip(int runningId, String runnerId)
 			throws NamingException, SQLException, ErrorFieldException, InvalidDataException {
 		Context initialContext = new InitialContext();
 		Context environmentContext = (Context) initialContext.lookup("java:comp/env");
@@ -82,6 +83,7 @@ public class UpdateServlet extends HttpServlet {
 		Connection databaseConnection = dataSource.getConnection();
 		DataAccess dataAccess = new DataAccess(databaseConnection);
 		RegistedPerson registedPersonThatConfirmPaySlip = dataAccess.queryRegistedPersonByRunningId(runningId);
+		registedPersonThatConfirmPaySlip.setRunnerId(runnerId);
 		dataAccess.confirmedPaySlipAndGenerateRunningKey(registedPersonThatConfirmPaySlip);
 				
 		databaseConnection.close();
