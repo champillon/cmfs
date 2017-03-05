@@ -36,7 +36,7 @@
               	maxActive="30" 
 	      	maxIdle="30" 
 	      	maxWait="10000"
-              	username="cmfs" 
+              	username="carnival"
 		password="welcome1" 
 		driverClassName="com.mysql.jdbc.Driver"
               	url="jdbc:mysql://localhost:3306/cmfs?useEncoding=true&amp;characterEncoding=utf-8"

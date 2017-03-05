@@ -1,6 +1,7 @@
-CREATE DATABASE cmfs DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+DROP DATABASE carnival;
+CREATE DATABASE carnival DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 
-CREATE TABLE registedPerson (
+CREATE TABLE carnival.registedPerson (
 runningId INT AUTO_INCREMENT,
 title VARCHAR(3), 
 firstName VARCHAR(50), 
@@ -14,7 +15,7 @@ tShirtSize VARCHAR(2),
 tShirtPickUpPoint VARCHAR(50),
 payInSlipPath VARCHAR(100),
 paid BOOLEAN,
-runnerId INT,
+runnerId VARCHAR(5),
 coRunner VARCHAR(250),
 PRIMARY KEY (runningId)
 );
