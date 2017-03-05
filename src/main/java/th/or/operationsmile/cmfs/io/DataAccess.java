@@ -16,8 +16,8 @@ public class DataAccess {
 
 	private Connection databaseConnection = null;
 	private static final String insertSQL = "INSERT INTO registedPerson ("
-			+ "title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid,coRunner) "
-			+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);";
+			+ "title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,payInSlipPath,paid,coRunner) "
+			+ "VALUES(?,?,?,?,?,?,?,?,?,?,?);";
 
 	private static final String updateSQLForConfirmedPayment = "UPDATE registedPerson " 
 			+ "SET paid = TRUE, runnerId = ? "
@@ -49,11 +49,9 @@ public class DataAccess {
 		preparedStatement.setString(6, registedPerson.getBirthDate());
 		preparedStatement.setString(7, registedPerson.getMobile());
 		preparedStatement.setString(8, registedPerson.getEmail());
-		preparedStatement.setString(9, registedPerson.gettShirtSize());
-		preparedStatement.setString(10, registedPerson.gettShirtPickUpPoint());
-		preparedStatement.setString(11, registedPerson.getPayInSlipPath());
-		preparedStatement.setBoolean(12, registedPerson.isPaid());
-		preparedStatement.setString(13, registedPerson.getCoRunner());
+		preparedStatement.setString(9, registedPerson.getPayInSlipPath());
+		preparedStatement.setBoolean(10, registedPerson.isPaid());
+		preparedStatement.setString(11, registedPerson.getCoRunner());
 		
 
 		preparedStatement.executeUpdate();
@@ -82,8 +80,6 @@ public class DataAccess {
 				registedPerson.setBirthDate(queryResult.getString("birthDate"));
 				registedPerson.setMobile(queryResult.getString("mobile"));
 				registedPerson.setEmail(queryResult.getString("email"));
-				registedPerson.settShirtSize(queryResult.getString("tShirtSize"));
-				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
 				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 				registedPerson.setPaid(queryResult.getBoolean("paid"));
 				registedPerson.setRunnerId(queryResult.getString("runnerId"));
@@ -123,8 +119,6 @@ public class DataAccess {
 			result.setBirthDate(queryResult.getString("birthDate"));
 			result.setMobile(queryResult.getString("mobile"));
 			result.setEmail(queryResult.getString("email"));
-			result.settShirtSize(queryResult.getString("tShirtSize"));
-			result.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
 			result.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 			result.setPaid(queryResult.getBoolean("paid"));
 			result.setRunnerId(queryResult.getString("runnerId"));
@@ -160,8 +154,6 @@ public class DataAccess {
 				registedPerson.setBirthDate(queryResult.getString("birthDate"));
 				registedPerson.setMobile(queryResult.getString("mobile"));
 				registedPerson.setEmail(queryResult.getString("email"));
-				registedPerson.settShirtSize(queryResult.getString("tShirtSize"));
-				registedPerson.settShirtPickUpPoint(queryResult.getString("tShirtPickUpPoint"));
 				registedPerson.setPayInSlipPath(queryResult.getString("payInSlipPath"));
 				registedPerson.setPaid(queryResult.getBoolean("paid"));
 				registedPerson.setRunnerId(queryResult.getString("runnerId"));

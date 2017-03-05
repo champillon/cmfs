@@ -15,8 +15,6 @@ public class RegistedPerson {
 	private String birthDate;
 	private String mobile;
 	private String email;
-	private String tShirtSize;
-	private String tShirtPickUpPoint;
 	private String payInSlipPath;
 	private boolean paid = false;
 	private String runnerId;
@@ -155,28 +153,6 @@ public class RegistedPerson {
 
 	}
 
-	public String gettShirtSize() {
-		return tShirtSize;
-	}
-
-	public void settShirtSize(String tShirtSize) throws InvalidDataException {
-
-		if (InputValidation.validateTShirtSize(tShirtSize)) {
-			this.tShirtSize = tShirtSize;
-		} else {
-			throw new InvalidDataException("Invalid tShirtSize: " + tShirtSize);
-		}
-
-	}
-
-	public String gettShirtPickUpPoint() {
-		return tShirtPickUpPoint;
-	}
-
-	public void settShirtPickUpPoint(String tShirtPickUpPoint) {
-		this.tShirtPickUpPoint = tShirtPickUpPoint;
-	}
-
 	public String getPayInSlipPath() {
 		return payInSlipPath;
 	}
@@ -193,8 +169,7 @@ public class RegistedPerson {
 	public String toString() {
 		return "{" + this.getTitle() + "," + this.getFirstName() + "," + this.getLastName() + ","
 				+ this.getFirstNameEn() + "," + this.getLastNameEn() + "," + this.getBirthDate() + ","
-				+ this.getMobile() + "," + this.getEmail() + "," + this.gettShirtSize() + ","
-				+ this.gettShirtPickUpPoint() + "," + this.getPayInSlipPath() + "}";
+				+ this.getMobile() + "," + this.getEmail() + "," + this.getPayInSlipPath() + "}";
 	}
 
 }

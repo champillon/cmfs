@@ -23,8 +23,6 @@
 			<th>Birth Date</th>
 			<th>Mobile</th>
 			<th>e-Mail</th>
-			<th>T-Shirt Size</th>
-			<th>T-Shirt Pick-Up Point</th>
 			<th>Uploaded Pay Slip</th>
 			<th>Runner ID</th>
 			<th>Confirm PaySlip</th>
@@ -40,8 +38,6 @@
 				<td><c:out value="${registedPerson.birthDate}" /></td>
 				<td><c:out value="${registedPerson.mobile}" /></td>
 				<td><c:out value="${registedPerson.email}" /></td>
-				<td><c:out value="${registedPerson.tShirtSize}" /></td>
-				<td><c:out value="${registedPerson.tShirtPickUpPoint}" /></td>
 				<td>
 					<a href="http://newsletter.operationsmile.or.th/uploaded/${registedPerson.payInSlipPath}" 
 						target="_blank">

@@ -175,7 +175,6 @@ public class InputValidation {
 		validateBirthDate(registedPerson.getBirthDate());
 		validateMobile(registedPerson.getMobile());
 		validateEmail(registedPerson.getEmail());
-		validateTShirtSize(registedPerson.gettShirtSize());
 	}
 
 	private static boolean registedPersonHaveNoNullField(RegistedPerson registedPerson)throws ErrorFieldException {
@@ -204,12 +203,6 @@ public class InputValidation {
 			}
 			else if(registedPerson.getEmail() == null){
 				throw new ErrorFieldException("found null filed","email");
-			}
-			else if(registedPerson.gettShirtSize() == null){
-				throw new ErrorFieldException("found null filed","tShirtSize");
-			}
-			else if(registedPerson.gettShirtPickUpPoint() == null){
-				throw new ErrorFieldException("found null filed","tShirtPickUpPoint");
 			}
 			else if(registedPerson.getPayInSlipPath() == null){
 				throw new ErrorFieldException("found null filed","payInSlipPath");
