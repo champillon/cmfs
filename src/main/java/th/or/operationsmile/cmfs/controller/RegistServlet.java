@@ -127,8 +127,6 @@ public class RegistServlet extends HttpServlet {
             result.setLastNameEn(requestValueMap.get("lastNameEn").get(i));
             result.setBirthDate(requestValueMap.get("birthDate").get(i) + "-" + requestValueMap.get("birthMonth").get(i));
             result.setMobile(requestValueMap.get("mobile").get(i));
-            result.settShirtSize(requestValueMap.get("tShirtSize").get(i));
-            result.settShirtPickUpPoint(requestValueMap.get("tShirtPickUpPoint").get(i));
             result.setPayInSlipPath(requestValueMap.get("payInSlipPath").get(0));
 
             if (eMail.equals(confirmedEmail)) {
