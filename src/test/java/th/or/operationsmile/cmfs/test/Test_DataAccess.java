@@ -20,9 +20,9 @@ import th.or.operationsmile.cmfs.io.DataAccess;
 import th.or.operationsmile.cmfs.model.RegistedPerson;
 
 public class Test_DataAccess {
-	private static final String databaseUsername = "root";
+	private static final String databaseUsername = "carnival";
 	private static final String databasePassword = "welcome1";
-	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/cmfs?useUnicode=true&characterEncoding=utf-8";
+	private static final String databaseConnectionUrl = "jdbc:mysql://localhost:3306/carnival?useUnicode=true&characterEncoding=utf-8";
 	
 	private static final String insertSQL = "INSERT INTO registedPerson "
 			+ "(title,firstName,lastName,firstNameEn,lastNameEn,birthDate,mobile,email,tShirtSize,tShirtPickUpPoint,payInSlipPath,paid) "
@@ -143,6 +143,7 @@ public class Test_DataAccess {
 		String queryFirstName1 = "TestFirstName1";
 		String queryFirstName2 = "TestFirstName2";
 		String queryFirstName3 = "ภาษาไทย";
+		String runnderId = "00001";
 		List<RegistedPerson> registedPeople = null;
 		RegistedPerson registedPerson = null;
 		
@@ -164,6 +165,7 @@ public class Test_DataAccess {
 		DataAccess dataAccess = new DataAccess(this.databaseConnection);
 		registedPeople = dataAccess.queryRegistedPersonByFirstName(queryFirstName1);
 		registedPerson = registedPeople.get(0);
+		registedPerson.setRunnerId(runnderId);
 		
 		dataAccess.confirmedPaySlipAndGenerateRunningKey(registedPerson);
 		
