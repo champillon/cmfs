@@ -182,19 +182,6 @@ public class DataAccess {
 	}
 
 	public void confirmedPaySlipAndGenerateRunningKey(RegistedPerson registedPerson) throws SQLException {
-		int maxRunnerId;
-		PreparedStatement queryResultStatement = databaseConnection.prepareStatement(selectMaxRunnerID);
-		ResultSet queryResult = queryResultStatement.executeQuery();
-
-		queryResult.next();
-		maxRunnerId = queryResult.getInt("max(runnerId)");
-
-		maxRunnerId++;
-		registedPerson.setRunnerId(maxRunnerId + "");
-
-		queryResult.close();
-		queryResultStatement.close();
-
 		PreparedStatement updateResultStatement = databaseConnection.prepareStatement(updateSQLForConfirmedPayment);
 		updateResultStatement.setString(1, registedPerson.getRunnerId());
 		updateResultStatement.setInt(2, registedPerson.getRunningId());
