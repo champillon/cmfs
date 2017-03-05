@@ -53,37 +53,36 @@
 
 	</div>
 	<div style="font-size: 14px;width=600px">
-		<u style="color: orange;">ขั้นตอนการสมัคร</u></br> 1.ค่าสมัครท่านละ 800 บาท
-		รวมเสื้อยืด สายรัดข้อมือ พบกับกิจกรรมเกมส์หลากหลาย อาหาร
-		และเครื่องดื่มฟรีตลอดงาน </br> 2.กรุณาโอนเงินเข้าบัญชี
-		ชื่อมูลนิธิสร้างรอยยิ้ม ธนาคารไทยพาณิชย์ สาขาเพลินจิต เลขที่บัญชี <b
-			style="color: pink">059-285581-4</b>
+		<u style="color: orange;">ขั้นตอนการสมัคร</u></br> 1.ค่าสมัครท่านละ 500 บาท
+		ในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย อาหาร และเครื่องดื่มฟรีตลอดงาน </br>
+		2.กรุณาโอนเงินเข้าบัญชี
+		ชื่อมูลนิธิสร้างรอยยิ้ม  ธนาคารกรุงเทพ สาขาเซ็นทรัลเอ็มบาสซี่ เลขที่บัญชี <b
+			style="color: pink">009-8-00444-3</b>
 		พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br>
-		3.กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน
+		3.กกรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน
 		พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
-		4.ท่านจะได้รับอีเมลตอบกลับพร้อมหมายเลขวิ่ง และเคล็ดลับเพื่อความสนุก </br>
+		4. ท่านจะได้รับอีเมลตอบกลับภายใน 2 วันทำการ </br>
 		5. หากไม่สะดวกกรอกแบบฟอร์มออนไลน์ สามารถดาวน์โหลดใบสมัครได้<a
 			href="http://goo.gl/5U9tBj">ที่นี่</a> กรอกรายละเอียด แล้ว fax
-		กลับมาที่ 02 014 4532 หรืออีเมล์ thailand@operationsmile.org<br />
-		6.หากมีคำถาม กรุณาติดต่อ <b style="color: lime">02 014 4530-1</b>หรืออีเมล
+		กลับมาที่ 02-075-2700-2 หรืออีเมล์ thailand@operationsmile.org<br />
+		6.หากมีคำถาม กรุณาติดต่อ <b style="color: lime"> 02-075-2700-2</b>หรืออีเมล
 		<b style="color: red">thailand@operationsmile.org</b><br />
 	</div>
 	<br />
 	<div style="font-size: 14px;width=600px">
-		<u style="color: pink;">How to enter #CMFS16</u></br> 1.Entry fee is 800
-		Baht per person, which includes the run, official t-shirt, wristband,
-		sideshow games, food and drink (all proceeds to Operation Smile
-		Thailand) </br> 2.Please transfer your fee (number of people X THB 800) to
-		“Operation Smile Foundation”, Siam Commercial Bank, Ploenchit Branch,
-		<b style="color: cyan">059-285581-4</b> </br> 3.Please fill out the online
-		application form individually and upload a copy of your transfer slip
-		before confirming your application. </br> 4.A confirmation email with your
-		running number(s) and our tips for the event will be sent to your
-		email address. </br> 5. The off-line application is available <a
+		<u style="color: pink;">How to enter #CMFS16</u></br> 1.Entry fee is 500 Baht
+		per person, which includes fun games, food and drink (all proceeds to
+		Operation Smile Thailand) </br> 2.Please transfer your fee (number of people X THB 500)
+		to “Operation Smile Foundation”, Bangkok Bank, Central Embassy Branch
+		<b style="color: cyan">009-800444-3</b> </br> 3.Please fill out the online
+		application form individually and upload a copy of your transfer
+		slip before confirming your application. </br> 4.A confirmation email for the
+		event will be sent to your email address within 2 working days. </br>
+		5. The off-line application is available <a
 			href="http://goo.gl/5U9tBj">here</a> to download. Please fill out all
-		details and fax to 02 014 4532 or email thailand@operationsmile.org<br />
+		details and fax to  02-075-2700-2 or email thailand@operationsmile.org<br />
 		6.Should you have any questions, please contact <b
-			style="color: orange">02 014 4530-1</b> or email to <b
+			style="color: orange">02-075-2700-2</b> or email to <b
 			style="color: yellow">thailand@operationsmile.org</b><br />
 	</div>
 	<br />
@@ -223,8 +222,7 @@
 					อีเมล์ (Email)*: <input type="email" name="email" /><br /> ยืนยัน
 					อีเมล์ (Confirm Email)*: <input type="email" name="confirmEmail" /><br />
 					<b style="color: lime;">ตัวอย่าง Example:
-						thailand@operationsmile.org </b><br /> <br /> ไซส์เสื้อ (T-Shirt
-					Size)*:<br />
+						thailand@operationsmile.org </b><br />
 				</div>
 			</div>
 
