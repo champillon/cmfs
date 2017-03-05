@@ -224,14 +224,7 @@
 					อีเมล์ (Confirm Email)*: <input type="email" name="confirmEmail" /><br />
 					<b style="color: lime;">ตัวอย่าง Example:
 						thailand@operationsmile.org </b><br /> <br /> ไซส์เสื้อ (T-Shirt
-					Size)*:<br /> <input type="radio" name="tShirtSize" value="s">S-36"
-					</input> <input type="radio" name="tShirtSize" value="m">M-40" </input> <input
-						type="radio" name="tShirtSize" value="l">L-44" </input> <input
-						type="radio" name="tShirtSize" value="xl">XL-48" </input> <br /> <br />
-					สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br />  <input
-						type="hidden" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี
-					วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini
-					Park on April 9, 2016, 15.30 hrs)</input><br /> <br />
+					Size)*:<br />
 				</div>
 			</div>
 
