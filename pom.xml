@@ -68,7 +68,7 @@
 				<configuration>
 					<url>http://newsletter.operationsmile.or.th:8080/manager/text</url>
 					<server>TomcatServer</server>
-					<path>/cmfs</path>
+					<path>/smilecarnival</path>
 				</configuration>
 			</plugin>
 		</plugins>
