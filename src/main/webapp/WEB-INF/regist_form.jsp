@@ -1,6 +1,6 @@
 ﻿<html>
 <head>
-<title>Colour Miles for Smiles: Application Form.</title>
+<title>Smile Carnival: Application Form.</title>
 <meta http-equiv="Content-Language" content="th">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -53,38 +53,38 @@
 	</div>
 	<div style="font-size: 14px;width=600px;text-align: left;">
 		<b><u>ขั้นตอนการสมัคร</u></b></br>
-		1.ค่าสมัครท่านละ 500 บาทในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย</br>
+		1. ค่าสมัครท่านละ 500 บาทในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย</br>
 		อาหาร และเครื่องดื่มฟรีตลอดงาน </br>
-		2.กรุณาโอนเงินเข้าบัญชีชื่อมูลนิธิสร้างรอยยิ้ม  ธนาคารกรุงเทพ สาขาเซ็นทรัล </br>
+		2. กรุณาโอนเงินเข้าบัญชีชื่อมูลนิธิสร้างรอยยิ้ม  ธนาคารกรุงเทพ สาขาเซ็นทรัล </br>
 		เอ็มบาสซี่ เลขที่บัญชี <b>009-8-00444-3</b> พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br>
-		3.กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงิน</br>
+		3. กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงิน</br>
 		ก่อนกดยืนยันการสมัคร </br>
-		4. ท่านจะได้รับอีเมลตอบกลับภายใน 2 วันทำการ </br>
-		5. นำอีเมลยืนยันการสมัครมารับบัตรได้ที่หน้างาน ณ ลานอเนกประสงค์ </br>
+		4. ท่านจะได้รับอีเมล์ตอบกลับภายใน 2 วันทำการ </br>
+		5. นำอีเมล์ยืนยันการสมัครมารับบัตรได้ที่หน้างาน ณ ลานอเนกประสงค์ </br>
 		สนามกีฬาแห่งชาติ (ศุภชลาศัย) ในวันที่ 1 เมษายน 2560 ตั้งแต่เวลา 17.00 น. </br>
 		6. หากไม่สะดวกกรอกแบบฟอร์มออนไลน์ สามารถดาวน์โหลดใบสมัครได้<a
 			href="http://goo.gl/5U9tBj">ที่นี่</a></br>
-	    กรอกรายละเอียด แล้ว fax กลับมาที่ 02-075-2700-2 หรืออีเมล์ thailand@operationsmile.org<br />
-		7.หากมีคำถาม กรุณาติดต่อ <b> 02-075-2700-2</b>หรืออีเมล
-		<b>thailand@operationsmile.org</b><br />
+	    กรอกรายละเอียด แล้ว fax กลับมาที่ 02-075-2703 หรืออีเมล์ thailand@operationsmile.org<br />
+		7. หากมีคำถาม กรุณาติดต่อ 02-075-2700-2 หรืออีเมล์
+		thailand@operationsmile.org<br />
 		หมายเหตุ: ท่านสามารถสมัครพร้อมกันได้มากสุด 5 ท่าน สำหรับผู้ที่ต้องการสมัครเกิน 5 ท่าน <br />
 		กรุณากรอกแบบฟอร์มการสมัคร และโหลดหลักฐานการโอนเงินอีกครั้ง<br />
 	</div>
 	<br />
 	<div style="font-size: 14px;width=600px;text-align: left;">
 		<b><u>How to enter Smile Carnival</u></b></br>
-		1.Entry fee is 500 Baht per person, which includes fun games, food and drink </br>
+		1. Entry fee is 500 Baht per person, which includes fun games, food and drink </br>
 		(all proceeds to Operation Smile Thailand) </br>
-		2.Please transfer your fee (number of people X THB 500) to “Operation Smile Foundation”,</br>
-		 Bangkok Bank, Central Embassy Branch <b>009-800444-3</b> </br>
-		3.Please fill out the online application form individually and upload a copy of your transfer </br>
+		2. Please transfer your fee (number of people X THB 500) to “Operation Smile Foundation”,</br>
+		 Bangkok Bank, Central Embassy Branch <b>009-8-00444-3</b> </br>
+		3. Please fill out the online application form individually and upload a copy of your transfer </br>
 		slip before confirming your application. </br>
-		4.A confirmation email for the event will be sent to your email address within 2 working days. </br>
-		5.Collect your ticket on the event date at the Outdoor Sport Courtyard </br>
+		4. A confirmation email for the event will be sent to your email address within 2 working days. </br>
+		5. Collect your ticket on the event date at the Outdoor Sport Courtyard </br>
 		at National Stadium of Thailand on April 1, 2017 from 17.00 hrs. </br>
-		6.The off-line application is available <a href="http://goo.gl/5U9tBj">here</a> to download.</br>
-		Please fill out all details and fax to  02-075-2700-2 or email thailand@operationsmile.org<br />
-		7.Should you have any questions, please contact <b>02-075-2700-2</b> or email to <b>thailand@operationsmile.org</b><br />
+		6. The off-line application is available <a href="http://goo.gl/5U9tBj">here</a> to download.</br>
+		Please fill out all details and fax to 02-075-2703 or email thailand@operationsmile.org<br />
+		7. Should you have any questions, please contact 02-075-2700-2 or email to thailand@operationsmile.org<br />
 	    Note: There is a maximum 5 applicants per form. For groups more than 5 applicants<br />
 	    please fill out more forms and upload the same transfer slip for each form.<br />
 	</div>
@@ -94,7 +94,7 @@
 			คำนำหน้า (Title)*:<br /> <input
 				type="radio" name="title" value="mr"> นาย/MR <input
 				type="radio" name="title" value="mrs"> นาง/MRS <input
-				type="radio" name="title" value="ms"> นางสาว/Miss <br /> <br />
+				type="radio" name="title" value="ms"> นางสาว/MS <br /> <br />
 			ชื่อ ภาษาไทย: <input type="text" name="firstName"><br /> <br />
 			นามสกุล ภาษาไทย: <input type="text" name="lastName" /><br /> <br />
 			ชื่อ ภาษาอังกฤษ (First Name in English)*: <input type="text"
@@ -159,7 +159,7 @@
 					คำนำหน้า (Title)*:<br /> <input
 						type="radio" name="title" value="mr"> นาย/MR <input
 						type="radio" name="title" value="mrs"> นาง/MRS <input
-						type="radio" name="title" value="ms"> นางสาว/Miss <br /> <br />
+						type="radio" name="title" value="ms"> นางสาว/MS <br /> <br />
 					ชื่อ ภาษาไทย: <input type="text" name="firstName"><br /> <br />
 					นามสกุล ภาษาไทย: <input type="text" name="lastName" /><br /> <br />
 					ชื่อ ภาษาอังกฤษ (First Name in English)*: <input type="text"
@@ -219,7 +219,7 @@
 				</div>
 			</div>
 
-			<input type="button" value="เพิ่มชื่อ (Add more Runners)"
+			<input type="button" value="เพิ่มชื่อ (Add more applicants)"
 				onclick="javascript:appendTo()" /> <br />แนบเอกสารยืนยันการโอนเงินเฉพาะไฟล์ JPEG เท่านั้น
 				(Pay-in Slip JPEG only)*:<br> <input type="file" name="payInSlip" size="50" /><br />
 			<br />
