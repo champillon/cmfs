@@ -41,62 +41,57 @@
 </style>
 </head>
 
-<body style="color: white;"
-	background="http://newsletter.operationsmile.or.th/background.png">
+<body style="color: black; background: #f1ebdc;text-align: center;padding: 10px;width:600px;">
 	<div id="title">
-		<img src="http://newsletter.operationsmile.or.th/logo.png"
-			width="600px">
-		<h1>
-			<span style="color: cyan">ใบสมัคร/</span><span style="color: yellow">Application
-			</span><span style="color: lime;">Form</span>
-		</h1>
+	    <h1>
+    			Smile Carnival
+    	</h1>
+		<h2>
+			ใบสมัครApplicationForm
+		</h2>
 
 	</div>
-	<div style="font-size: 14px;width=600px">
-		<u style="color: orange;">ขั้นตอนการสมัคร</u></br> 1.ค่าสมัครท่านละ 500 บาท
-		ในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย อาหาร และเครื่องดื่มฟรีตลอดงาน </br>
-		2.กรุณาโอนเงินเข้าบัญชี
-		ชื่อมูลนิธิสร้างรอยยิ้ม  ธนาคารกรุงเทพ สาขาเซ็นทรัลเอ็มบาสซี่ เลขที่บัญชี <b
-			style="color: pink">009-8-00444-3</b>
-		พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br>
-		3.กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน
-		พร้อมโหลดหลักฐานการโอนเงินก่อนกดยืนยันการสมัคร </br>
+	<div style="font-size: 14px;width=600px;text-align: left;">
+		<b><u>ขั้นตอนการสมัคร</u></b></br>
+		1.ค่าสมัครท่านละ 500 บาทในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย</br>
+		อาหาร และเครื่องดื่มฟรีตลอดงาน </br>
+		2.กรุณาโอนเงินเข้าบัญชีชื่อมูลนิธิสร้างรอยยิ้ม  ธนาคารกรุงเทพ สาขาเซ็นทรัล </br>
+		เอ็มบาสซี่ เลขที่บัญชี <b>009-8-00444-3</b> พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br>
+		3.กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงิน</br>
+		ก่อนกดยืนยันการสมัคร </br>
 		4. ท่านจะได้รับอีเมลตอบกลับภายใน 2 วันทำการ </br>
 		5. นำอีเมลยืนยันการสมัครมารับบัตรได้ที่หน้างาน ณ ลานอเนกประสงค์ </br>
 		สนามกีฬาแห่งชาติ (ศุภชลาศัย) ในวันที่ 1 เมษายน 2560 ตั้งแต่เวลา 17.00 น. </br>
 		6. หากไม่สะดวกกรอกแบบฟอร์มออนไลน์ สามารถดาวน์โหลดใบสมัครได้<a
-			href="http://goo.gl/5U9tBj">ที่นี่</a> กรอกรายละเอียด แล้ว fax
-		กลับมาที่ 02-075-2700-2 หรืออีเมล์ thailand@operationsmile.org<br />
-		7.หากมีคำถาม กรุณาติดต่อ <b style="color: lime"> 02-075-2700-2</b>หรืออีเมล
-		<b style="color: red">thailand@operationsmile.org</b><br />
+			href="http://goo.gl/5U9tBj">ที่นี่</a></br>
+	    กรอกรายละเอียด แล้ว fax กลับมาที่ 02-075-2700-2 หรืออีเมล์ thailand@operationsmile.org<br />
+		7.หากมีคำถาม กรุณาติดต่อ <b> 02-075-2700-2</b>หรืออีเมล
+		<b>thailand@operationsmile.org</b><br />
 		หมายเหตุ: ท่านสามารถสมัครพร้อมกันได้มากสุด 5 ท่าน สำหรับผู้ที่ต้องการสมัครเกิน 5 ท่าน <br />
 		กรุณากรอกแบบฟอร์มการสมัคร และโหลดหลักฐานการโอนเงินอีกครั้ง<br />
 	</div>
 	<br />
-	<div style="font-size: 14px;width=600px">
-		<u style="color: pink;">How to enter #CMFS16</u></br> 1.Entry fee is 500 Baht
-		per person, which includes fun games, food and drink (all proceeds to
-		Operation Smile Thailand) </br> 2.Please transfer your fee (number of people X THB 500)
-		to “Operation Smile Foundation”, Bangkok Bank, Central Embassy Branch
-		<b style="color: cyan">009-800444-3</b> </br> 3.Please fill out the online
-		application form individually and upload a copy of your transfer
-		slip before confirming your application. </br> 4.A confirmation email for the
-		event will be sent to your email address within 2 working days. </br>
-		5. Collect your ticket on the event date at the Outdoor Sport Courtyard </br>
+	<div style="font-size: 14px;width=600px;text-align: left;">
+		<b><u>How to enter Smile Carnival</u></b></br>
+		1.Entry fee is 500 Baht per person, which includes fun games, food and drink </br>
+		(all proceeds to Operation Smile Thailand) </br>
+		2.Please transfer your fee (number of people X THB 500) to “Operation Smile Foundation”,</br>
+		 Bangkok Bank, Central Embassy Branch <b>009-800444-3</b> </br>
+		3.Please fill out the online application form individually and upload a copy of your transfer </br>
+		slip before confirming your application. </br>
+		4.A confirmation email for the event will be sent to your email address within 2 working days. </br>
+		5.Collect your ticket on the event date at the Outdoor Sport Courtyard </br>
 		at National Stadium of Thailand on April 1, 2017 from 17.00 hrs. </br>
-		6. The off-line application is available <a
-			href="http://goo.gl/5U9tBj">here</a> to download. Please fill out all
-		details and fax to  02-075-2700-2 or email thailand@operationsmile.org<br />
-		7.Should you have any questions, please contact <b
-			style="color: orange">02-075-2700-2</b> or email to <b
-			style="color: yellow">thailand@operationsmile.org</b><br />
+		6.The off-line application is available <a href="http://goo.gl/5U9tBj">here</a> to download.</br>
+		Please fill out all details and fax to  02-075-2700-2 or email thailand@operationsmile.org<br />
+		7.Should you have any questions, please contact <b>02-075-2700-2</b> or email to <b>thailand@operationsmile.org</b><br />
 	    Note: There is a maximum 5 applicants per form. For groups more than 5 applicants<br />
 	    please fill out more forms and upload the same transfer slip for each form.<br />
 	</div>
 	<br />
-	<div id="content">
-		<div id="master-form" class="hide">
-			<span style="color: cyan">คำนำหน้า (Title)*: </span><br /> <input
+	<div id="content" >
+		<div id="master-form" class="hide" style="text-align: left;">
+			คำนำหน้า (Title)*:<br /> <input
 				type="radio" name="title" value="mr"> นาย/MR <input
 				type="radio" name="title" value="mrs"> นาง/MRS <input
 				type="radio" name="title" value="ms"> นางสาว/Miss <br /> <br />
@@ -151,26 +146,17 @@
 				<option value="11">November</option>
 				<option value="12">December</option>
 			</select> <br /> <br /> เบอร์โทรศัพท์มือถือ (Mobile Phone Number)*: <input
-				type="tel" name="mobile" maxlenght="10" /><br /> <b
-				style="color: yellow;">ตัวอย่าง Example: 0812345678 </b><br /> <br />
+				type="tel" name="mobile" maxlenght="10" /><br /> <b>ตัวอย่าง Example: 0812345678 </b><br /> <br />
 			อีเมล์ (Email)*: <input type="email" name="email" /><br /> ยืนยัน
 			อีเมล์ (Confirm Email)*: <input type="email" name="confirmEmail" /><br />
-			<b style="color: lime;">ตัวอย่าง Example:
-				thailand@operationsmile.org </b><br /> <br /> ไซส์เสื้อ (T-Shirt Size)*:<br />
-			<input type="radio" name="tShirtSize" value="s">S-36" </input> <input
-				type="radio" name="tShirtSize" value="m">M-40" </input> <input
-				type="radio" name="tShirtSize" value="l">L-44" </input> <input
-				type="radio" name="tShirtSize" value="xl">XL-48" </input> <br /> <br />
-			สถานที่รับเสื้อ (T-Shirt Pick-up Point)*: <br />  <input
-				type="hidden" name="tShirtPickUpPoint" value="event">รับหน้างานที่สวนลุมพินี
-			วันที่ 9 เมษายน 2559 เวลา 15.30 น. (Event registration at Lumpini
-			Park on April 9, 2016, 15.30 hrs)</input><br /> <br />
+			<b>ตัวอย่าง Example:
+				thailand@operationsmile.org </b><br />
 		</div>
 		<form id="regist_form" action="./Regist" method="POST"
-			enctype="multipart/form-data">
+			enctype="multipart/form-data" style="text-align: left;">
 			<div id="append-form">
-				<div>
-					<span style="color: cyan">คำนำหน้า (Title)*: </span><br /> <input
+				<div style="text-align: left;">
+					คำนำหน้า (Title)*:<br /> <input
 						type="radio" name="title" value="mr"> นาย/MR <input
 						type="radio" name="title" value="mrs"> นาง/MRS <input
 						type="radio" name="title" value="ms"> นางสาว/Miss <br /> <br />
@@ -225,18 +211,18 @@
 						<option value="11">November</option>
 						<option value="12">December</option>
 					</select> <br /> <br /> เบอร์โทรศัพท์มือถือ (Mobile Phone Number)*: <input
-						type="tel" name="mobile" maxlenght="10" /><br /> <b
-						style="color: yellow;">ตัวอย่าง Example: 0812345678 </b><br /> <br />
+						type="tel" name="mobile" maxlenght="10" /><br /> <b>ตัวอย่าง Example: 0812345678 </b><br /> <br />
 					อีเมล์ (Email)*: <input type="email" name="email" /><br /> ยืนยัน
 					อีเมล์ (Confirm Email)*: <input type="email" name="confirmEmail" /><br />
-					<b style="color: lime;">ตัวอย่าง Example:
+					<b>ตัวอย่าง Example:
 						thailand@operationsmile.org </b><br />
 				</div>
 			</div>
 
 			<input type="button" value="เพิ่มชื่อ (Add more Runners)"
-				onclick="javascript:appendTo()" /> <br /> <span style="color: cyan">แนบเอกสารยืนยันการโอนเงินเฉพาะไฟล์ JPEG เท่านั้น
-				(Pay-in Slip JPEG only)*: </span><input type="file" name="payInSlip" size="50" /><br />
+				onclick="javascript:appendTo()" /> <br />แนบเอกสารยืนยันการโอนเงินเฉพาะไฟล์ JPEG เท่านั้น
+				(Pay-in Slip JPEG only)*:<br> <input type="file" name="payInSlip" size="50" /><br />
+			<br />
 			<input type="submit" value="สมัคร/APPLY" /> <br />
 		</form>
 	</div>
