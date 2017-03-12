@@ -94,9 +94,9 @@ public class RegistServlet extends HttpServlet {
             response.setContentType("text/plain; charset=utf-8");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().append(
-                    "ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ"
+                    "ขอบคุณที่สมัครเข้าร่วมสนุกในงานการกุศล Smile Carnival ในครั้งนี้ ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมล์พร้อมหมายเลขผู้สมัครภายใน 2 วันทำการ"
                     + "\n"
-                    + "Thank you for applying to enter Colour Miles for Smiles 2016: Neon Edition. Please allow us two working days to review your application and email your confirmation and running number.");
+                    + "Thank you for applying to enter Smile Carnival. Please allow us two working days to review your application and email your confirmation number.");
         } else {
             response.setContentType("text/plain; charset=utf-8");
             response.setCharacterEncoding("UTF-8");
