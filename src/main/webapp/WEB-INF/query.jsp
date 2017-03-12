@@ -44,18 +44,17 @@
 						<c:out value="${registedPerson.payInSlipPath}" />
 					</a>
 				</td>
-				<form action="./Update" method="post">
 				<td>
-					<input type="text" name="runnerId">
+					<c:out value="${registedPerson.runnerId}" />
 				</td>
 				<td>
-					<input type="hidden" name="runningId" value="${registedPerson.runningId}">
-					<c:if test="${empty registedPerson.runnerId }">
-						<input type="submit" value="Confirm Payment">
-					</c:if>
-
+					<form action="./Update" method="post">
+						<input type="hidden" name="runningId" value="${registedPerson.runningId}">
+						<c:if test="${empty registedPerson.runnerId }">
+							<input type="submit" value="Confirm Payment">
+						</c:if>
+					</form>
 				</td>
-				</form>
 			</tr>
 			<tr>
 				<td colSpan="14">
