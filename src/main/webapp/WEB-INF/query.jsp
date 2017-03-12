@@ -24,7 +24,6 @@
 			<th>Mobile</th>
 			<th>e-Mail</th>
 			<th>Uploaded Pay Slip</th>
-			<th>Runner ID</th>
 			<th>Confirm PaySlip</th>
 		</tr>
 		<c:forEach var="registedPerson" items="${requestScope.registedPeople}">
@@ -43,9 +42,6 @@
 						target="_blank">
 						<c:out value="${registedPerson.payInSlipPath}" />
 					</a>
-				</td>
-				<td>
-					<c:out value="${registedPerson.runnerId}" />
 				</td>
 				<td>
 					<form action="./Update" method="post">
