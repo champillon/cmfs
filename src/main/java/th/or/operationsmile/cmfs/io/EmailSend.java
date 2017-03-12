@@ -40,13 +40,13 @@ public class EmailSend {
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
 		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("narumon.m@operationsmile.org"));
 		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
-		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> รอตรวจสอบข้อมูลการโอน  Colour Miles for Smiles: Application Status -> Application Status Verification");
+		generateMailMessage.setSubject("Smile Carnival: Application Status -> Application Status Verification");
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"ขอบคุณที่สมัครเข้าร่วมในงานวิ่งการกุศล Colour Miles for Smiles 2016, Neon Edition ครั้งนี้ "
+		emailBody  = emailBody+"ขอบคุณที่สมัครเข้าร่วมสนุกในงานการกุศล Smile Carnival ในครั้งนี้"
 				+ "ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ"
 				+ "\n\n"
-				+ "Thank you for applying to enter Colour Miles for Smiles 2016: Neon Edition. "
+				+ "Thank you for applying to enter Smile Carnival. "
 				+ "Please allow us two working days to review your application and email your confirmation and running number.";
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");
 
@@ -72,77 +72,54 @@ public class EmailSend {
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
 		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("narumon.m@operationsmile.org"));
 		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
-		generateMailMessage.setSubject("Colour Miles of Smiles: แจ้งสถานะการลงทะเบียน -> แจ้งหมายเลขผู้วิ่งของท่าน Colour Miles for Smiles: Application Status -> Runner Number Notification");
+		generateMailMessage.setSubject("Smile Carnival: Application Status -> Runner Number Notification");
 		
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"ทางมูลนิธิสร้างรอยยิ้มได้ดำเนินการตรวจสอบเอกสารเรียบร้อยแล้ว หมายเลขผู้วิ่งของท่านคือ "+registedPerson.getRunnerId();
+		emailBody  = emailBody+"ทางมูลนิธิสร้างรอยยิ้มได้ดำเนินการตรวจสอบเอกสารเรียบร้อยแล้ว หมายเลขการสมัครของท่านคือ "+registedPerson.getRunnerId();
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"ท่านสามารถมารับเสื้อวิ่ง และสายรัดข้อมือได้หน้างานที่อาคารบันเทิง สวนลุมพินี เวลา 15.30 น. เป็นต้นไป พบกันที่สวนลุมพินี วันเสาร์ที่ 9 เมษายน 2559 นี้ ";
+		emailBody  = emailBody+"ท่านสามารถมารับบัตรเข้างานได้ที่หน้างาน ณ ลานอเนกประสงค์ สนามกีฬาแห่งชาติ (ศุภชลาศัย) เวลา 17.00 น. เป็นต้นไป";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
+		emailBody  = emailBody+"แล้วพบกันที่สนามกีฬาแห่งชาติ (ศุภชลาศัย) วันเสาร์ที่ 1 เมษายน 2560 นี้นะคะ";
 		emailBody  = emailBody+"กำหนดการ";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"15.30 น.\t\tลงทะเบียน";
+		emailBody  = emailBody+"17.00 น.\t\tลงทะเบียน";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.00 น.\t\tเปิดงาน พิธีมอบเงินบริจาค";
+		emailBody  = emailBody+"18.00 น.\t\tเปิดงานและเริ่มงาน";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.15 น.\t\tการนำวอร์มอัพ";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.30 น.\t\tเริ่มวิ่ง";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"19.00 น.\t\tมอบรางวัล และโปรยสี";
+		emailBody  = emailBody+"21.00 น.\t\tงานจบ";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"เคล็ดลับเพื่อความสนุก";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"1.ผงสีที่ใช้โปรยในงานเป็นสูตรปราศจากสารพิษ และย่อยสลายได้ แต่ก็ต้องระวังไม่ให้เข้าตา";
+		emailBody  = emailBody+"1. เนื่องจากที่จอดรถมีจำนวนจำกัด แนะนำให้นั่งรถไฟฟ้า (สถานีสนามกีฬาแห่งชาติ ทางออกหมายเลข 2) รถประจำทาง หรือรถสาธารณะมาเพื่อความสะดวก";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"2.การทำความสะอาดสีที่เปื้อนผิวหนัง แนะนำให้เช็ดทำความสะอาดด้วยเบบี้ออยก่อนค่อยล้างด้วยน้ำ";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"3.กรุณาอย่านำสิ่งของมีค่าติดตัวมา มีที่รับฝากของไว้ให้บริการ แต่ทางมูลนิธิฯ จะไม่รับผิดชอบในกรณีสูญหาย";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"4.เนื่องจากที่จอดรถมีจำนวนจำกัด แนะนำให้นั่งรถไฟฟ้าใต้ดิน รถประจำทาง หรือรถสาธารณะมาเพื่อความสะดวก";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"5.กรุณาช่วยกันรักษาความสะอาดของสวนลุมพินี";
-		emailBody  = emailBody+"\n";
-		
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"Congratulations: Your Colour Miles for Smiles 2016: Neon Edition entry is confirmed! Your running number is "+registedPerson.getRunnerId()+".";
+		emailBody  = emailBody+"2. กรุณาช่วยกันรักษาความสะอาดของบริเวณงานด้วยนะคะ";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"Please come to collect your running pack at the event visit the event registration at the Entertainment Building, Lumpini Park from 15.30 hrs. See you at Lumpini Park on April 9, 2016.";
+		emailBody  = emailBody+"Congratulations: Your Smile Carnival entry is confirmed! Your ticker number is "+registedPerson.getRunnerId()+".";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
+		emailBody  = emailBody+"Please show your confirmation email to collect your ticket at the entrance at Outdoor Sport Courtyard, the National Stadium of Thailand from 17.00 hrs on ward.";
+		emailBody  = emailBody+"\n";
+		emailBody  = emailBody+"\n";
+		emailBody  = emailBody+"See you at the National Stadium of Thailand on April 1, 2017.";
 		emailBody  = emailBody+"Agenda";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"15.30 hrs.\t\tRegistration";
+		emailBody  = emailBody+"17.00 hrs.\t\tRegistration";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.00 hrs.\t\tOpening & Donation Photo Op";
+		emailBody  = emailBody+"18.00 hrs.\t\tOpening";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.15 hrs.\t\tWarm up";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"17.30 hrs.\t\tRun Starts";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"19.00 hrs.\t\tPrize & Colour Blow";
+		emailBody  = emailBody+"19:00 hrs.\t\tClosing";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"Our tips for a fun event";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"1.The multi-coloured powder used at the finish line is non-toxic and biodegradable however do avoid getting it in your eyes.";
+		emailBody  = emailBody+"1. Due to limited parking we suggest you take public transport (BTS, National Stadium station exit no.2) or taxis to and from the event.";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"2.After the event the fastest way to remove the coloured powder from your skin is to apply baby oil before taking your normal bath or shower.";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"3.Please do not bring valuables to the event. A bag minding service will be available as a courtesy but we will not be responsible should your belongings get damaged or go missing.";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"4.Due to limited parking we suggest you take public transport or taxis to and from the event.";
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"5.Please help us keep Lumpini Park as clean as we can for our fellow citizens. Use the bins!";
-		emailBody  = emailBody+"\n";
-		
-		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"แผนที่ (Map) --> http://newsletter.operationsmile.or.th/map.jpg";
+		emailBody  = emailBody+"2. Please help us keep the venue as clean as we can for our fellow citizens.";
 		emailBody  = emailBody+"\n";
 		
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");
