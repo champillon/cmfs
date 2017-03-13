@@ -43,11 +43,11 @@ public class EmailSend {
 		generateMailMessage.setSubject("Smile Carnival: Application Status -> Application Status Verification");
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"ขอบคุณที่สมัครเข้าร่วมสนุกในงานการกุศล Smile Carnival ในครั้งนี้"
-				+ "ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมลพร้อมหมายเลขผู้วิ่งภายใน 2 วันทำการ"
+		emailBody  = emailBody+"ขอบคุณที่สมัครเข้าร่วมสนุกในงานการกุศล Smile Carnival ในครั้งนี้ "
+				+ "ทางมูลนิธิสร้างรอยยิ้มจะดำเนินการตรวจสอบเอกสาร และตอบรับกลับไปทางอีเมล์พร้อมหมายเลขผู้สมัครภายใน 2 วันทำการ"
 				+ "\n\n"
 				+ "Thank you for applying to enter Smile Carnival. "
-				+ "Please allow us two working days to review your application and email your confirmation and running number.";
+				+ "Please allow us two working days to review your application and email your confirmation number.";
 		generateMailMessage.setContent(emailBody, "text/plain; charset=utf-8");
 
 		Transport transport = getMailSession.getTransport("smtp");
@@ -79,10 +79,11 @@ public class EmailSend {
 		emailBody  = emailBody+"ทางมูลนิธิสร้างรอยยิ้มได้ดำเนินการตรวจสอบเอกสารเรียบร้อยแล้ว หมายเลขการสมัครของท่านคือ "+registedPerson.getRunnerId();
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"ท่านสามารถมารับบัตรเข้างานได้ที่หน้างาน ณ ลานอเนกประสงค์ สนามกีฬาแห่งชาติ (ศุภชลาศัย) เวลา 17.00 น. เป็นต้นไป";
+		emailBody  = emailBody+"กรุณานำอีเมล์ตอบรับเพื่อยืนยันการสมัครมาแสดง ณ จุดลงทะเบียน บริเวณลานอเนกประสงค์ สนามกีฬาแห่งชาติ (ศุภชลาศัย) เวลา 17.00 น. เป็นต้นไป";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"แล้วพบกันที่สนามกีฬาแห่งชาติ (ศุภชลาศัย) วันเสาร์ที่ 1 เมษายน 2560 นี้นะคะ";
+		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"กำหนดการ";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"17.00 น.\t\tลงทะเบียน";
@@ -102,10 +103,11 @@ public class EmailSend {
 		emailBody  = emailBody+"Congratulations: Your Smile Carnival entry is confirmed! Your ticker number is "+registedPerson.getRunnerId()+".";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
-		emailBody  = emailBody+"Please show your confirmation email to collect your ticket at the entrance at Outdoor Sport Courtyard, the National Stadium of Thailand from 17.00 hrs on ward.";
+		emailBody  = emailBody+"Please show your confirmation email at the registration point at Outdoor Sport Courtyard, the National Stadium of Thailand from 17.00 hrs on ward.";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"See you at the National Stadium of Thailand on April 1, 2017.";
+		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"Agenda";
 		emailBody  = emailBody+"\n";
 		emailBody  = emailBody+"17.00 hrs.\t\tRegistration";

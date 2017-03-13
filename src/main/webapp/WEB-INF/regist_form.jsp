@@ -53,14 +53,14 @@
 	</div>
 	<div style="font-size: 14px;width=600px;text-align: left;">
 		<b><u>ขั้นตอนการสมัคร</u></b></br>
-		1. ค่าสมัครท่านละ 500 บาทในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย</br>
+		1. ค่าสมัครท่านละ 500 บาท ในงานท่านจะพบกับกิจกรรมเกมส์หลากหลาย</br>
 		อาหาร และเครื่องดื่มฟรีตลอดงาน </br>
 		2. กรุณาโอนเงินเข้าบัญชีชื่อมูลนิธิสร้างรอยยิ้ม  ธนาคารกรุงเทพ สาขาเซ็นทรัล </br>
 		เอ็มบาสซี เลขที่บัญชี <b>009-8-00444-3</b> พร้อมถ่ายรูปหลักฐานการโอนเงินเก็บไว้ </br>
 		3. กรุณากรอกแบบฟอร์มการสมัครของแต่ละท่านให้ครบถ้วน พร้อมโหลดหลักฐานการโอนเงิน</br>
 		ก่อนกดยืนยันการสมัคร </br>
 		4. ท่านจะได้รับอีเมล์ตอบกลับภายใน 2 วันทำการ </br>
-		5. นำอีเมล์ยืนยันการสมัครมารับบัตรได้ที่หน้างาน ณ ลานอเนกประสงค์ </br>
+		5. กรุณานำอีเมล์ยืนยันการสมัครมาแสดง ณ จุดลงทะเบียน บริเวณลานอเนกประสงค์</br>
 		สนามกีฬาแห่งชาติ (ศุภชลาศัย) ในวันที่ 1 เมษายน 2560 ตั้งแต่เวลา 17.00 น. </br>
 		6. หากไม่สะดวกกรอกแบบฟอร์มออนไลน์ สามารถดาวน์โหลดใบสมัครได้<a
 			href="http://newsletter.operationsmile.or.th/form.pdf">ที่นี่</a></br>
@@ -73,15 +73,15 @@
 	<br />
 	<div style="font-size: 14px;width=600px;text-align: left;">
 		<b><u>How to enter #SmileCarnival</u></b></br>
-		1. Entry fee is 500 Baht per person, which includes fun games, food and drink </br>
-		(all proceeds to Operation Smile Thailand) </br>
-		2. Please transfer your fee (number of people X THB 500) to “Operation Smile Foundation”,</br>
+		1. Entry fee is 500 Baht per person, which includes fun games, free food and drink.</br>
+		All proceeds to Operation Smile Thailand </br>
+		2. Please transfer your fee (number of people x 500 Baht) to “Operation Smile Foundation”,</br>
 		 Bangkok Bank, Central Embassy Branch, Account Number <b>009-8-00444-3</b> </br>
 		3. Please fill out the online application form individually and upload a copy of your transfer </br>
 		slip before confirming your application. </br>
 		4. A confirmation email for the event will be sent to your email address within 2 working days. </br>
-		5. Collect your ticket on the event date at the Outdoor Sport Courtyard </br>
-		at National Stadium of Thailand on April 1, 2017 from 17.00 hrs. </br>
+		5. Please show your confirmation email at the registration point </br>
+		at Outdoor Sport Courtyard, the National Stadium of Thailand from 17.00 hrs onwards.</br>
 		6. The off-line application is available <a href="http://newsletter.operationsmile.or.th/form.pdf">here</a> to download.</br>
 		Please fill out all details and fax to 02-075-2703 or email thailand@operationsmile.org<br />
 		7. Should you have any questions, please contact 02-075-2700 to 2 or email to thailand@operationsmile.org<br />
