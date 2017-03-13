@@ -72,7 +72,7 @@ public class EmailSend {
 		generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(mailTo));
 		generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress("narumon.m@operationsmile.org"));
 		generateMailMessage.setFrom(new InternetAddress("operationsmile.th@gmail.com"));
-		generateMailMessage.setSubject("Smile Carnival: Application Status -> Runner Number Notification");
+		generateMailMessage.setSubject("Smile Carnival: Application Status -> Applicant Number Notification");
 		
 		String emailBody = "เรียนคุณ "+registedPerson.getFirstNameEn()+" "+registedPerson.getLastNameEn()+"\n";
 		emailBody  = emailBody+"\n";
